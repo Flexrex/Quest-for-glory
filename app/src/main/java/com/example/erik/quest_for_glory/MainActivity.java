@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void test()
     {
-        jaha
+        int i = 0;
     }
 }
