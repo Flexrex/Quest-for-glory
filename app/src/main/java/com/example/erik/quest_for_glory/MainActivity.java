@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void test()
     {
-        boolean riktiga = true;
+        boolean isTrue = true;
     }
 }
