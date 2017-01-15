@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity
 {
     public final static String EXTRA_MESSAGE = "com.example.eriko.quest-for-glory.MESSAGE";
     private int theLevel = 0;
-
+    int test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
