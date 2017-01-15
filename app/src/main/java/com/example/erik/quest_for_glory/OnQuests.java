@@ -16,11 +16,15 @@ public class OnQuests extends AppCompatActivity
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(message);
+        TextView textView1 = new TextView(this);
+        textView1.setTextSize(40);
+        textView1.setText(message);
+        TextView textView2 = new TextView(this);
+        textView2.setTextSize(40);
+        textView2.setText(message);
 
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_on_quests);
-        layout.addView(textView);
+        layout.addView(textView1);
+        layout.addView(textView2);
     }
 }
