@@ -10,26 +10,22 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
-    public final static String EXTRA_MESSAGE = "com.example.eriko.quest-for-glory.MESSAGE";
     private int theLevel = 0;
-    int test;
+    private int theXP = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button change = (Button) findViewById(R.id.change);
     }
 
     public void OnQuests(View view)
     {
+        Intent intent = new Intent(this, OnQuests.class);
         TextView level = (TextView) findViewById(R.id.level);
         theLevel++;
         level.setText("level" + theLevel);
-        Intent intent = new Intent(this, OnQuests.class);
         startActivity(intent);
-
     }
-
 }
