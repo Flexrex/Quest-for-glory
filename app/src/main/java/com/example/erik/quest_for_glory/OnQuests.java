@@ -9,19 +9,25 @@ import android.widget.TextView;
 
 public class OnQuests extends AppCompatActivity
 {
+    TextView levelText;
+    int playerLevel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_quests);
+
+        Intent intent = getIntent();
+        playerLevel = intent.getIntExtra("player level", 0);
+        levelText = (TextView) findViewById(R.id.levelText);
+        levelText.setText("Level " + playerLevel);
     }
 
-    public void OnQuests(View view)
+    public void OnQuests2(View view)
     {
-        Intent intent = new Intent(this, OnQuests.class);
-        TextView level = (TextView) findViewById(R.id.level);
-        theLevel++;
-        level.setText("level" + theLevel);
+        Intent intent = new Intent(this, MainActivity.class);
+        levelText.setText("Level " + playerLevel);
         startActivity(intent);
     }
 }

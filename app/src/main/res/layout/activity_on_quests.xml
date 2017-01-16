@@ -5,11 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
+    <TextView
+        android:id="@+id/levelText"
+        android:text="@string/levelText"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:fontFamily="serif"
+        android:typeface="normal"
+        android:textAllCaps="false" />
     <Button
-        android:id="@+id/change"
+        android:id="@+id/change2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/change"
-        android:onClick="OnQuests"
+        android:onClick="OnQuests2"
         />
 </LinearLayout>
