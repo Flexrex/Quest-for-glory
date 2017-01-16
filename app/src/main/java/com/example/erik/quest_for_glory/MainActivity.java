@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         levelText = (TextView) findViewById(R.id.levelText);
         player = new MainActivity("Erko", 1, 0, 100, 20);
         levelText.setText("Level " + player.getLevel());
