@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity
+public class Quests extends AppCompatActivity
 {
     private String name;
     private int level;
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity
     MainActivity player;
     TextView levelText;
 
-    MainActivity(String name, int level, int XP, int health, int damage)
+    Quests(String name, int level, int XP, int health, int damage)
     {
         this.name = name;
         this.level = level;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
         this.damage = damage;
     }
 
-    MainActivity()
+    Quests()
     {
 
     }

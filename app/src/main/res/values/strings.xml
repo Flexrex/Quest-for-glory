@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Quest-for-glory</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">send</string>
-    <string name="button_test">test</string>
     <string name="levelText">Level</string>
     <string name="XPText">XP</string>
-    <string name="change">change</string>
+    <string name="greedText">Greed</string>
+    <string name="inventoryText">inventory</string>
+    <string name="skillsText">skills</string>
 </resources>
