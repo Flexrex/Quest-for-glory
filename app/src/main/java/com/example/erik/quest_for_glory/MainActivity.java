@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -18,11 +15,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
     }
-
     public void Settings(View view)
     {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
-
 }
