@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Quest-for-glory</string>
-    <string name="levelText">Level</string>
-    <string name="XPText">XP</string>
-    <string name="greedText">Greed</string>
-    <string name="inventoryText">Inventory</string>
-    <string name="skillsText">Inventory</string>
+    <string name="level_text">Level</string>
+    <string name="XP_text">XP</string>
+    <string name="greed_text">Greed</string>
+    <string name="inventory_text">Inventory</string>
+    <string name="skills_text">Inventory</string>
+    <string name="quest_text">Inventory</string>
     <string name="title_activity_settings">Settings</string>
 </resources>
