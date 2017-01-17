@@ -38,6 +38,7 @@ public class Quests extends AppCompatActivity
         levelText = (TextView) findViewById(R.id.levelText);
         player = new Quests("Erko", 1, 0, 100, 20);
         levelText.setText("Level " + player.getLevel());
+
     }
 
     public void OnQuests1(View view)
