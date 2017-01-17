@@ -13,7 +13,7 @@ public class Quests extends AppCompatActivity
     private int XP;
     private int health;
     private int damage;
-    MainActivity player;
+    Quests player;
     TextView levelText;
 
     Quests(String name, int level, int XP, int health, int damage)
@@ -36,7 +36,7 @@ public class Quests extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         levelText = (TextView) findViewById(R.id.levelText);
-        player = new MainActivity("Erko", 1, 0, 100, 20);
+        player = new Quests("Erko", 1, 0, 100, 20);
         levelText.setText("Level " + player.getLevel());
     }
 
