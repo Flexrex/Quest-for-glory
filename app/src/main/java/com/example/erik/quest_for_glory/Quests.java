@@ -34,10 +34,8 @@ public class Quests extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        levelText = (TextView) findViewById(R.id.levelText);
-        player = new Quests("Erko", 1, 0, 100, 20);
-        levelText.setText("Level " + player.getLevel());
+        setContentView(R.layout.activity_quests);
+
     }
 
     public void OnQuests1(View view)

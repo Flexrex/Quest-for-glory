@@ -13,7 +13,8 @@
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="Start"/>
 
     <Button
         android:layout_width="150dp"
