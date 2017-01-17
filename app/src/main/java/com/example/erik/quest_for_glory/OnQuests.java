@@ -11,7 +11,6 @@ public class OnQuests extends AppCompatActivity
 {
     TextView levelText;
     int playerLevel;
-    int hej;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
