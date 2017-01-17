@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity
     MainActivity player;
     TextView levelText;
 
-    MainActivity(String name, int level, int XP, int health, int damage)
+    //MainActivity(String name, int level, int XP, int health, int damage)
     {
         this.name = name;
         this.level = level;
@@ -25,10 +25,6 @@ public class MainActivity extends AppCompatActivity
         this.damage = damage;
     }
 
-    MainActivity()
-    {
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,18 +32,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        levelText = (TextView) findViewById(R.id.levelText);
-        player = new MainActivity("Erko", 1, 0, 100, 20);
-        levelText.setText("Level " + player.getLevel());
     }
 
-    public void OnQuests1(View view)
+    public void Settings(View view)
     {
-        Intent intent = new Intent(this, OnQuests.class);
-        player.increaseLevel();
-        levelText.setText("Level " + player.getLevel());
-        intent.putExtra("player level", player.getLevel());
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 

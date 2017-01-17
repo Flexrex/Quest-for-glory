@@ -1,41 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/levelText"
-        android:text="@string/levelText"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:layout_weight="1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:fontFamily="serif"
-        android:typeface="normal"
-        android:textAllCaps="false" />
-    <TextView
-        android:id="@+id/XPText"
-        android:text="@string/XPText"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:layout_weight="1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:fontFamily="serif"
-        android:typeface="normal"
-        android:textAllCaps="false" />
+    android:orientation="vertical"
+    android:background="@android:color/holo_green_dark">
+
     <Button
-        android:id="@+id/change1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/change"
-        android:onClick="OnQuests1"
-        />
-</LinearLayout>
+        android:text="Start"
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="Options"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:onClick="Settings" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Quest for glory"
+        android:textStyle="normal|bold"
+        android:textSize="35sp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="76dp"
+        android:textAlignment="center"
+        android:id="@+id/textView"/>
+
+    <TextView
+        android:text="Your journey begins here!"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView2"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
