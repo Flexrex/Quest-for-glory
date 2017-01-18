@@ -15,7 +15,11 @@ public class chCreate extends AppCompatActivity {
 
     public void Done(View view)
     {
+        Player player = new Player("Erko", 1, 0, 200, 100, 20);
         Intent intent = new Intent(this, Quests.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }

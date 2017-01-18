@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 public class Quests extends AppCompatActivity
 {
     TextView levelText;
     TextView XPText;
-    int playerLevel;
-    int playerXP;
+    int XP;
+    Player player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,9 +22,14 @@ public class Quests extends AppCompatActivity
         setContentView(R.layout.activity_quests);
         levelText = (TextView) findViewById(R.id.levelText);
         XPText = (TextView) findViewById(R.id.XPText);
-        Intent intent = getIntent();
-        playerLevel = intent.getIntExtra("player level", 0);
-        playerXP = intent.getIntExtra("player XP", 0);
+
+        player = (Player) getIntent().getSerializableExtra("player");
+
+        String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
+        String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+
+        levelText.setText(playerLevelText);
+        XPText.setText(playerXPText);
 
     }
     public void theForest(View view)

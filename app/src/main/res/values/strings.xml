@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quest-for-glory</string>
     <string name="level_text">Level</string>
-    <string name="XP_text">XP</string>
+    <string name="XP_text">XP </string>
     <string name="greed_text">Greed</string>
     <string name="inventory_text">Inventory</string>
     <string name="skills_text">Skills</string>
