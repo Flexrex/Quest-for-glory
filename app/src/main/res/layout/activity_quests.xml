@@ -115,9 +115,9 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/theForrestText"
+            android:id="@+id/theForestText"
             android:gravity="center"
-            android:text="@string/the_forrest_text"
+            android:text="@string/the_forest_text"
             android:textSize="40dp"
             android:layout_width="100dp"
             android:layout_height="70dp"
@@ -136,9 +136,9 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/theForrestTextRewards"
+            android:id="@+id/theForestTextRewards"
             android:gravity="center"
-            android:text="@string/the_forrest_text_rewards"
+            android:text="@string/the_forest_text_rewards"
             android:textSize="25dp"
             android:layout_width="100dp"
             android:layout_height="40dp"

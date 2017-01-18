@@ -6,8 +6,8 @@
     <string name="inventory_text">Inventory</string>
     <string name="skills_text">Skills</string>
     <string name="quest_1_text">Quest: kill 1 spriggan in The Forest</string>
-    <string name="the_forrest_text">The Forrest</string>
-    <string name="the_forrest_text_rewards">Rewards Herbs</string>
+    <string name="the_forest_text">The Forest</string>
+    <string name="the_forest_text_rewards">Rewards Herbs</string>
     <string name="the_mountain_text">The Mountain</string>
     <string name="the_mountain_text_rewards">Rewards Ores</string>
     <string name="the_ruin_text">The Ruin</string>
