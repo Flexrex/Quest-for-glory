@@ -23,5 +23,6 @@ public class TheForest extends AppCompatActivity
         Intent intent = getIntent();
         playerHealth = intent.getIntExtra("player health", 0);
         playerDamage = intent.getIntExtra("player damage", 0);
+
     }
 }
