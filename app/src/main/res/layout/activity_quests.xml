@@ -16,8 +16,8 @@
             android:text="@string/level_text"
             android:gravity="center"
             android:textSize="20dp"
-            android:layout_width="128dp"
-            android:layout_height="36dp"
+            android:layout_width="120dp"
+            android:layout_height="37dp"
             android:background="@drawable/border_level_xp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -30,7 +30,7 @@
             android:gravity="center"
             android:textSize="20dp"
             android:layout_width="50dp"
-            android:layout_height="36dp"
+            android:layout_height="37dp"
             android:background="@drawable/border_level_xp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -127,7 +127,7 @@
             android:typeface="normal"
             android:textAllCaps="false"
             android:clickable="true"
-            android:onClick="theForrest"
+            android:onClick="theForest"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -148,7 +148,7 @@
             android:typeface="normal"
             android:textAllCaps="false"
             android:clickable="true"
-            android:onClick="theForrest"
+            android:onClick="theForest"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -271,7 +271,7 @@
             android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:background="@drawable/border_menus"
+            android:background="@drawable/border_menus_highlight"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
             android:typeface="normal"
