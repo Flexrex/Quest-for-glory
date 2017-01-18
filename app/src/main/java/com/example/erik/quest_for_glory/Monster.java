@@ -4,25 +4,24 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Player extends AppCompatActivity
+public class Monster extends AppCompatActivity
 {
     private String name;
     private int level;
-    private int XP;
     private int health;
     private int damage;
-    Player player;
 
-    Player(String name, int level, int XP, int health, int damage)
+    Monster spriggan;
+
+    Monster(String name, int level, int health, int damage)
     {
         this.name = name;
         this.level = level;
-        this.XP = XP;
         this.health = health;
         this.damage = damage;
     }
 
-    Player()
+    Monster()
     {
 
     }
@@ -33,15 +32,14 @@ public class Player extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quests);
 
-        player = new Player("Erko", 1, 0, 100, 20);
+        spriggan = new Monster("Erko", 1, 80, 15);
 
         Intent intentQuests = new Intent(this, Quests.class);
-        intentQuests.putExtra("player level", player.getLevel());
-        intentQuests.putExtra("player XP", player.XP);
+        intentQuests.putExtra("spriggan level", spriggan.getLevel());
 
         Intent intentTheForest = new Intent(this, TheForest.class);
-        intentTheForest.putExtra("player health", player.getHealth());
-        intentTheForest.putExtra("player damage", player.getDamage());
+        intentTheForest.putExtra("spriggan health", spriggan.getHealth());
+        intentTheForest.putExtra("spriggan damage", spriggan.getDamage());
     }
 
     public void setName(String name)
@@ -59,14 +57,6 @@ public class Player extends AppCompatActivity
     public int getLevel()
     {
         return level;
-    }
-    public void increaseXP(int amount)
-    {
-        XP += amount;
-    }
-    public int getXP()
-    {
-        return XP;
     }
     public void setHealth(int health)
     {
