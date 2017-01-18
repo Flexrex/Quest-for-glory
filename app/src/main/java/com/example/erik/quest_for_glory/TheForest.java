@@ -18,7 +18,7 @@ public class TheForest extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_on_quests);
+        setContentView(R.layout.activity_the_forest);
 
         Intent intent = getIntent();
         playerHealth = intent.getIntExtra("player health", 0);
