@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ch_create"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    tools:context="com.example.erik.quest_for_glory.chCreate"
+    android:orientation="vertical"
+    >
+    <EditText
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginStart="22dp"
+        android:id="@+id/editText"
+        android:background="@android:color/white"
+        android:hint="Name"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:textSize="30sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:text="Warrior"
+            android:layout_height="75dp"
+            android:id="@+id/checkBox"
+            android:textSize="22sp"
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:checked="true"
+            android:buttonTint="@android:color/black" />
+
+        <CheckBox
+            android:text="Archer"
+            android:layout_height="75dp"
+            android:id="@+id/checkBox2"
+            android:textSize="22sp"
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <CheckBox
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:id="@+id/checkBox3"
+            android:textSize="22sp"
+            android:text="Mage"
+            android:layout_weight="1"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="Female"
+            android:textSize="30sp"
+            android:visibility="visible" />
+        <CheckBox
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="Male"
+            android:textSize="30sp"
+            android:visibility="visible" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/background_dark"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_gravity="bottom"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Create!"
+            android:textAllCaps="false"
+            android:textSize="40sp"
+            android:background="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

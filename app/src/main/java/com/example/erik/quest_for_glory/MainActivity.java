@@ -13,14 +13,16 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     public void Settings(View view)
     {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
+
     public void Start(View view)
     {
-        Intent intent = new Intent(this, Quests.class);
+        Intent intent = new Intent(this, chCreate.class);
         startActivity(intent);
     }
 }
