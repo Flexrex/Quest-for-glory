@@ -5,6 +5,6 @@
     <string name="greed_text">Greed</string>
     <string name="inventory_text">Inventory</string>
     <string name="skills_text">Skills</string>
-    <string name="quest_text">Quest:</string>
+    <string name="quest_1_text">kill 1 spriggan in the forest</string>
     <string name="title_activity_settings">Settings</string>
 </resources>

@@ -17,8 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Settings"></activity>
-        <activity android:name=".Quests"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".Quests" />
+        <activity android:name=".TheForest"></activity>
     </application>
 
 </manifest>
