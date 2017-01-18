@@ -6,7 +6,7 @@
 
     <!-- View background color -->
     <solid
-        android:color="#FAE34B" >
+        android:color="#A18F1A" >
     </solid>
 
     <!-- View border color and width -->
@@ -19,5 +19,4 @@
     <corners
         android:radius="0dp"   >
     </corners>
-
 </shape>
