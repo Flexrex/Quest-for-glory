@@ -8,27 +8,10 @@ import android.widget.TextView;
 
 public class Quests extends AppCompatActivity
 {
-    private String name;
-    private int level;
-    private int XP;
-    private int health;
-    private int damage;
-    Quests player;
     TextView levelText;
-
-    Quests(String name, int level, int XP, int health, int damage)
-    {
-        this.name = name;
-        this.level = level;
-        this.XP = XP;
-        this.health = health;
-        this.damage = damage;
-    }
-
-    Quests()
-    {
-
-    }
+    TextView XPText;
+    int playerLevel;
+    int playerXP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,58 +19,15 @@ public class Quests extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quests);
         levelText = (TextView) findViewById(R.id.levelText);
-        player = new Quests("Erko", 1, 0, 100, 20);
-        levelText.setText("Level " + player.getLevel());
+        XPText = (TextView) findViewById(R.id.XPText);
+        Intent intent = getIntent();
+        playerLevel = intent.getIntExtra("player level", 0);
+        playerXP = intent.getIntExtra("player XP", 0);
 
     }
-
-    public void OnQuests1(View view)
+    public void theForest(View view)
     {
-        Intent intent = new Intent(this, OnQuests.class);
-        player.increaseLevel();
-        levelText.setText("Level " + player.getLevel());
-        intent.putExtra("player level", player.getLevel());
+        Intent intent = new Intent(this, TheForest.class);
         startActivity(intent);
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    public String getName()
-    {
-        return name;
-    }
-    public void increaseLevel()
-    {
-        level += 1;
-    }
-    public int getLevel()
-    {
-        return level;
-    }
-    public void increaseXP(int amount)
-    {
-        XP += amount;
-    }
-    public int getXP()
-    {
-        return XP;
-    }
-    public void setHealth(int health)
-    {
-        this.health = health;
-    }
-    public int getHealth()
-    {
-        return health;
-    }
-    public void setDamage(int health)
-    {
-        this.health = health;
-    }
-    public int getDamage()
-    {
-        return health;
     }
 }

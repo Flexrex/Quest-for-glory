@@ -18,8 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Settings" />
-        <activity android:name=".Quests" />
         <activity android:name=".chCreate"></activity>
+        <activity android:name=".Quests" />
+        <activity android:name=".TheForest"></activity>
     </application>
 
 </manifest>
