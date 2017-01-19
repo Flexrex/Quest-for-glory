@@ -8,10 +8,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/forest"
     tools:context="com.example.erik.quest_for_glory.TheForest">
-
     <ImageView
-        android:layout_width="75dp"
-        android:layout_height="100dp"
-        android:src="@drawable/spriggan" />
+    android:layout_width="100dp"
+    android:layout_height="150dp"
+    android:src="@drawable/spriggan"
+    android:id="@+id/spriggan"
+    android:layout_marginTop="30dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        android:src="@drawable/player"
+        android:id="@+id/player"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/spriggan" />
+
 </RelativeLayout>
