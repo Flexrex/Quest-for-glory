@@ -12,6 +12,7 @@ public class Quests extends AppCompatActivity
     Monster spriggan;
     TextView levelText;
     TextView XPText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -19,8 +20,7 @@ public class Quests extends AppCompatActivity
         setContentView(R.layout.activity_quests);
         levelText = (TextView) findViewById(R.id.levelText);
         XPText = (TextView) findViewById(R.id.XPText);
-
-        player = new Player("Erko", 1, 0, 200, 100, 20);
+        player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
@@ -42,6 +42,7 @@ public class Quests extends AppCompatActivity
         Intent intent = new Intent(this, Greed.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -50,6 +51,7 @@ public class Quests extends AppCompatActivity
         Intent intent = new Intent(this, Inventory.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -58,6 +60,7 @@ public class Quests extends AppCompatActivity
         Intent intent = new Intent(this, Skills.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -66,6 +69,7 @@ public class Quests extends AppCompatActivity
         Intent intent = new Intent(this, Gear.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -74,6 +78,7 @@ public class Quests extends AppCompatActivity
         Intent intent = new Intent(this, Kingdom.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -82,6 +87,7 @@ public class Quests extends AppCompatActivity
         Intent intent = new Intent(this, Quests.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }

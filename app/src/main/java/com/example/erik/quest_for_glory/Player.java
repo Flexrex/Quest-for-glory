@@ -81,14 +81,17 @@ public class Player extends AppCompatActivity implements Serializable
     {
         return health;
     }
-    public void takeDamage() { int amount; }
-    public void dealDamage() { int amount; }
-    public void setDamage(int health)
+    public void takeDamage(int damage)
     {
-        this.health = health;
+        health -= damage;
+    }
+    public int strike() { return damage; }
+    public void setDamage(int damage)
+    {
+        this.damage = damage;
     }
     public int getDamage()
     {
-        return health;
+        return damage;
     }
 }

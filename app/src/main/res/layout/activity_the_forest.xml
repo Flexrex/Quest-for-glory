@@ -46,16 +46,16 @@
         android:layout_above="@+id/player"
         android:layout_alignStart="@+id/player"
         android:layout_marginBottom="10dp" />
-
     <TextView
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:background="@drawable/border_offensive"
-        android:text="Strike "
+        android:text="Strike"
         android:gravity="center"
-        android:id="@+id/playerStrike"
+        android:id="@+id/strike"
         android:layout_below="@+id/playerHealthBar"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="40dp"
+        android:clickable="false"
         android:onClick="strike"/>
 </RelativeLayout>
