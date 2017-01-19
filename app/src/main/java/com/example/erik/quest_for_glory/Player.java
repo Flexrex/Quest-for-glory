@@ -14,15 +14,17 @@ public class Player extends AppCompatActivity implements Serializable
     private int XP;
     private int XPToNextLevel;
     private int health;
+    private int maxHealth;
     private int damage;
 
-    Player(String name, int level, int XP, int XPToNextLevel, int health, int damage)
+    Player(String name, int level, int XP, int XPToNextLevel, int maxHealth, int damage)
     {
         this.name = name;
         this.level = level;
         this.XP = XP;
         this.XPToNextLevel = XPToNextLevel;
-        this.health = health;
+        this.maxHealth = maxHealth;
+        health = maxHealth;
         this.damage = damage;
     }
 
@@ -45,10 +47,6 @@ public class Player extends AppCompatActivity implements Serializable
     {
         return name;
     }
-    public void setLevel(int level)
-    {
-        this.level = level;
-    }
     public int getLevel()
     {
         return level;
@@ -62,16 +60,13 @@ public class Player extends AppCompatActivity implements Serializable
         level += 1;
         XP = XP - XPToNextLevel;
         XPToNextLevel = (XPToNextLevel * 2);
-    }
-    public void setXP(int XP)
-    {
-        this.XP = XP;
+        maxHealth *= 1.2;
+        damage *= 1.2;
     }
     public int getXP()
     {
         return XP;
     }
-    public void setXPToNextLevel(int XPToNextLevel) {this.XPToNextLevel = XPToNextLevel;}
     public int getXPToNextLevel() { return XPToNextLevel; }
     public void setHealth(int health)
     {
@@ -81,9 +76,10 @@ public class Player extends AppCompatActivity implements Serializable
     {
         return health;
     }
-    public void takeDamage(int damage)
+    public int getMaxHealth() { return maxHealth; }
+    public void takeDamage(int amount)
     {
-        health -= damage;
+        health -= amount;
     }
     public int strike() { return damage; }
     public void setDamage(int damage)

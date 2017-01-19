@@ -7,13 +7,11 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity
 {
-    Monster spriggan;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        spriggan = new Monster("Spriggan", 1, 80, 15);
     }
     public void Settings(View view)
     {

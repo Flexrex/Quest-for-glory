@@ -10,14 +10,18 @@ public class Monster extends AppCompatActivity implements Serializable
 {
     private String name;
     private int level;
+    private int XPYield;
     private int health;
+    private int maxHealth;
     private int damage;
 
-    Monster(String name, int level, int health, int damage)
+    Monster(String name, int level, int XPYield, int maxHealth, int damage)
     {
         this.name = name;
         this.level = level;
-        this.health = health;
+        this.XPYield = XPYield;
+        this.maxHealth = maxHealth;
+        health = maxHealth;
         this.damage = damage;
     }
 
@@ -48,6 +52,10 @@ public class Monster extends AppCompatActivity implements Serializable
     {
         return level;
     }
+    public int getXPYield()
+    {
+        return XPYield;
+    }
     public void levelUp()
     {
         level += 1;
@@ -60,11 +68,11 @@ public class Monster extends AppCompatActivity implements Serializable
     {
         return health;
     }
+    public int getMaxHealth() { return maxHealth; }
     public void takeDamage(int damage)
     {
         health -= damage;
     }
-    public void dealDamage() { int amount; }
     public void setDamage(int damage)
     {
         this.damage = damage;
