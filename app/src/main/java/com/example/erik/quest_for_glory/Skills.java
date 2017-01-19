@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Skills extends AppCompatActivity {
+public class Skills extends AppCompatActivity
+{
     Player player;
     TextView levelText;
     TextView XPText;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skills);
         levelText = (TextView) findViewById(R.id.levelText);

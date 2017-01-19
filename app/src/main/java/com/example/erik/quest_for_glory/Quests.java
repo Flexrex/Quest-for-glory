@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.io.Serializable;
-
 public class Quests extends AppCompatActivity
 {
     Player player;
@@ -22,7 +20,6 @@ public class Quests extends AppCompatActivity
         XPText = (TextView) findViewById(R.id.XPText);
 
         player = (Player) getIntent().getSerializableExtra("player");
-
         String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
 

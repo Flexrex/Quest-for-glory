@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.erik.quest_for_glory.Settings"
     android:background="@android:color/holo_green_dark">
-
     <CheckBox
         android:text="Sound"
         android:layout_width="wrap_content"
@@ -21,7 +20,6 @@
         android:layout_marginStart="30dp"
         android:buttonTint="@android:color/black"
         android:checked="false" />
-
     <CheckBox
         android:text="Notifications"
         android:layout_width="wrap_content"
@@ -33,5 +31,4 @@
         android:layout_below="@+id/checkBox2"
         android:layout_alignStart="@+id/checkBox2"
         android:buttonTint="@android:color/black" />
-
 </RelativeLayout>

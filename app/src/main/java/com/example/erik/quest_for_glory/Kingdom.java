@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Kingdom extends AppCompatActivity {
+public class Kingdom extends AppCompatActivity
+{
     Player player;
     TextView levelText;
     TextView XPText;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kingdom);
         levelText = (TextView) findViewById(R.id.levelText);
