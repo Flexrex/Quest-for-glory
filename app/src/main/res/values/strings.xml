@@ -16,4 +16,11 @@
     <string name="gear_text">Gear</string>
     <string name="kingdom_text">Kingdom</string>
     <string name="quests_text">Quests</string>
+    <string-array name="planets_array">
+        <item>Not Selected</item>
+        <item>Warrior</item>
+        <item>Mage</item>
+        <item>Archer</item>
+
+    </string-array>
 </resources>
