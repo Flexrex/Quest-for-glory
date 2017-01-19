@@ -38,23 +38,7 @@ public class Player extends AppCompatActivity implements Serializable
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quests);
-
-
-        //player = new Player("Erko", 1, 0, 200, 100, 20);
-        //Intent intent = new Intent(this, Quests.class);
-        //intent.putExtra("player", player);
-        //intent.putExtra("player level", player.getLevel());
     }
-    public void createPlayer()
-    {
-        Player player = new Player();
-        player.setName("Leon");
-        Intent mIntent = new Intent(this,Quests.class);
-        Bundle mBundle = new Bundle();
-        mBundle.putSerializable(SER_KEY ,player);
-        mIntent.putExtras(mBundle);
-    }
-
     public void setName(String name)
     {
         this.name = name;

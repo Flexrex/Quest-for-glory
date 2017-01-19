@@ -17,10 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Settings"></activity>
-        <activity android:name=".chCreate"></activity>
-        <activity android:name=".Quests"></activity>
-        <activity android:name=".TheForest"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".chCreate" />
+        <activity android:name=".Quests" />
+        <activity android:name=".TheForest" />
+        <activity android:name=".Inventory" />
+        <activity android:name=".Greed" />
+        <activity android:name=".Skills" />
+        <activity android:name=".Gear" />
+        <activity android:name=".Kingdom"></activity>
     </application>
 
 </manifest>

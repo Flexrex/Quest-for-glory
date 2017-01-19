@@ -9,10 +9,7 @@ public class TheForest extends AppCompatActivity
 {
     TextView playerHealthText;
     TextView monsterHealthText;
-    int playerHealth;
-    int playerDamage;
-    int monsterHealth;
-    int monsterDamage;
+    Player player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,9 +17,7 @@ public class TheForest extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_the_forest);
 
-        Intent intent = getIntent();
-        playerHealth = intent.getIntExtra("player health", 0);
-        playerDamage = intent.getIntExtra("player damage", 0);
+        player = (Player) getIntent().getSerializableExtra("player");
 
     }
 }
