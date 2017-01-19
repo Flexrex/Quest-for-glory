@@ -10,11 +10,9 @@ import java.io.Serializable;
 
 public class Quests extends AppCompatActivity
 {
+    Player player;
     TextView levelText;
     TextView XPText;
-    int XP;
-    Player player;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -30,7 +28,6 @@ public class Quests extends AppCompatActivity
 
         levelText.setText(playerLevelText);
         XPText.setText(playerXPText);
-
     }
     public void theForest(View view)
     {
@@ -43,31 +40,49 @@ public class Quests extends AppCompatActivity
     public void greed(View view)
     {
         Intent intent = new Intent(this, Greed.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
     public void inventory(View view)
     {
         Intent intent = new Intent(this, Inventory.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
     public void skills(View view)
     {
         Intent intent = new Intent(this, Skills.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
     public void gear(View view)
     {
         Intent intent = new Intent(this, Gear.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
     public void kingdom(View view)
     {
         Intent intent = new Intent(this, Kingdom.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
     public void quests(View view)
     {
         Intent intent = new Intent(this, Quests.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }

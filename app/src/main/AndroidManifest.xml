@@ -25,7 +25,7 @@
         <activity android:name=".Greed" />
         <activity android:name=".Skills" />
         <activity android:name=".Gear" />
-        <activity android:name=".Kingdom"></activity>
+        <activity android:name=".Kingdom" />
     </application>
 
 </manifest>

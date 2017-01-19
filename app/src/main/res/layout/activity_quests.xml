@@ -5,12 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/levelText"
             android:text="@string/level_text"
@@ -23,7 +21,6 @@
             android:fontFamily="serif"
             android:typeface="normal"
             android:textAllCaps="false" />
-
         <TextView
             android:id="@+id/XPText"
             android:text="@string/XP_text"
@@ -37,13 +34,11 @@
             android:typeface="normal"
             android:textAllCaps="false"
             android:layout_weight="1" />
-
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/greedText"
             android:gravity="center"
@@ -59,7 +54,6 @@
             android:clickable="false"
             android:onClick="greed"
             android:layout_weight="1" />
-
         <TextView
             android:id="@+id/inventoryText"
             android:gravity="center"
@@ -75,7 +69,6 @@
             android:clickable="false"
             android:onClick="inventory"
             android:layout_weight="1" />
-
         <TextView
             android:id="@+id/skillsText"
             android:gravity="center"
@@ -96,7 +89,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/quest1Text"
             android:gravity="center"
@@ -116,7 +108,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/theForestText"
             android:gravity="center"
@@ -137,7 +128,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/theForestTextRewards"
             android:gravity="center"
@@ -158,7 +148,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/theMountainText"
             android:gravity="center"
@@ -178,7 +167,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/theMountainTextRewards"
             android:gravity="center"
@@ -198,7 +186,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/theRuinText"
             android:gravity="center"
@@ -218,7 +205,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/theRuinTextRewards"
             android:gravity="center"
@@ -238,7 +224,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/gearText"
             android:gravity="center"
