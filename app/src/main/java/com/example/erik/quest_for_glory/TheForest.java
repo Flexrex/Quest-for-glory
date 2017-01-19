@@ -1,6 +1,5 @@
 package com.example.erik.quest_for_glory;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +14,7 @@ public class TheForest extends AppCompatActivity
     String playerHealthText;
     String sprigganHealthText;
     @Override
+
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
