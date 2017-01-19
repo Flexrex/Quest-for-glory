@@ -7,10 +7,10 @@ import android.widget.TextView;
 
 public class TheForest extends AppCompatActivity
 {
-    TextView playerHealthText;
-    TextView monsterHealthText;
     Player player;
-
+    Monster spriggan;
+    TextView playerHealthBar;
+    TextView sprigganHealthBar;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -18,6 +18,16 @@ public class TheForest extends AppCompatActivity
         setContentView(R.layout.activity_the_forest);
 
         player = (Player) getIntent().getSerializableExtra("player");
+        spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
+
+        String playerHealthText = "Health: " + player.getHealth();
+
+
+        playerHealthBar.setText(playerHealthText);
+
+    }
+    public void strike()
+    {
 
     }
 }

@@ -9,6 +9,7 @@ import android.widget.TextView;
 public class Quests extends AppCompatActivity
 {
     Player player;
+    Monster spriggan;
     TextView levelText;
     TextView XPText;
     @Override
@@ -19,7 +20,8 @@ public class Quests extends AppCompatActivity
         levelText = (TextView) findViewById(R.id.levelText);
         XPText = (TextView) findViewById(R.id.XPText);
 
-        player = (Player) getIntent().getSerializableExtra("player");
+        player = new Player("Erko", 1, 0, 200, 100, 20);
+        spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
 
@@ -31,6 +33,7 @@ public class Quests extends AppCompatActivity
         Intent intent = new Intent(this, TheForest.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }

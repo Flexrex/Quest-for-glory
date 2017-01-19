@@ -5,13 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class chCreate extends AppCompatActivity {
+public class chCreate extends AppCompatActivity
+{
     Player player;
+    Monster spriggan;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_create);
         player = new Player("Erko", 1, 0, 200, 100, 20);
+        spriggan = new Monster("Spriggan", 1, 80, 15);
     }
 
     public void Done(View view)
@@ -19,6 +23,7 @@ public class chCreate extends AppCompatActivity {
         Intent intent = new Intent(this, Quests.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
     }

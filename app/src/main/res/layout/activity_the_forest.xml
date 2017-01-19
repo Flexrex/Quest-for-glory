@@ -15,15 +15,47 @@
     android:layout_height="150dp"
     android:src="@drawable/spriggan"
     android:id="@+id/spriggan"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="10dp"
     android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true" />
+    android:layout_centerHorizontal="true"/>
     <ImageView
         android:layout_width="110dp"
         android:layout_height="150dp"
         android:src="@drawable/player"
         android:id="@+id/player"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/spriggan" />
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:background="@drawable/border_health"
+        android:text="Health: "
+        android:gravity="center"
+        android:id="@+id/sprigganHealthBar"
+        android:layout_below="@+id/spriggan"
+        android:layout_alignStart="@+id/spriggan"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:background="@drawable/border_health"
+        android:text="Health: "
+        android:gravity="center"
+        android:id="@+id/playerHealthBar"
+        android:layout_above="@+id/player"
+        android:layout_alignStart="@+id/player"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@drawable/border_offensive"
+        android:text="Strike "
+        android:gravity="center"
+        android:id="@+id/playerStrike"
+        android:layout_below="@+id/playerHealthBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:onClick="strike"/>
 </RelativeLayout>

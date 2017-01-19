@@ -4,14 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Monster extends AppCompatActivity
+import java.io.Serializable;
+
+public class Monster extends AppCompatActivity implements Serializable
 {
     private String name;
     private int level;
     private int health;
     private int damage;
-
-    Monster spriggan;
 
     Monster(String name, int level, int health, int damage)
     {
@@ -31,17 +31,7 @@ public class Monster extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quests);
-
-        spriggan = new Monster("Erko", 1, 80, 15);
-
-        Intent intentQuests = new Intent(this, Quests.class);
-        intentQuests.putExtra("spriggan level", spriggan.getLevel());
-
-        Intent intentTheForest = new Intent(this, TheForest.class);
-        intentTheForest.putExtra("spriggan health", spriggan.getHealth());
-        intentTheForest.putExtra("spriggan damage", spriggan.getDamage());
     }
-
     public void setName(String name)
     {
         this.name = name;
@@ -50,13 +40,17 @@ public class Monster extends AppCompatActivity
     {
         return name;
     }
-    public void increaseLevel()
+    public void setLevel(int level)
     {
-        level += 1;
+        this.level = level;
     }
     public int getLevel()
     {
         return level;
+    }
+    public void levelUp()
+    {
+        level += 1;
     }
     public void setHealth(int health)
     {

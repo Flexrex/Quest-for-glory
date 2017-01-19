@@ -15,8 +15,6 @@ public class Player extends AppCompatActivity implements Serializable
     private int XPToNextLevel;
     private int health;
     private int damage;
-    Player player;
-    public  final static String SER_KEY = "com.easyinfogeek.objectPass.ser";
 
     Player(String name, int level, int XP, int XPToNextLevel, int health, int damage)
     {
