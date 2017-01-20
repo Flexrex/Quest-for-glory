@@ -7,9 +7,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_green_dark"
     tools:context="com.example.erik.quest_for_glory.chCreate"
-    android:orientation="vertical"
-    >
-
+    android:orientation="vertical">
     <EditText
         android:layout_height="40dp"
         android:inputType="textPersonName"
@@ -22,7 +20,6 @@
         android:textSize="30sp"
         android:layout_width="317dp"
         android:textAlignment="center" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -32,7 +29,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:id="@+id/linearLayout2">
-
         <Button
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -44,7 +40,6 @@
             android:layout_width="0dp"
             />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,23 +51,21 @@
             android:layout_width="150dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:text="Female"
+            android:text="Male"
             android:textSize="30sp"
             android:visibility="visible"
             android:layout_marginLeft="40dp"
             app:buttonTint="@android:color/black" />
-
         <CheckBox
             android:layout_width="150dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:text="Male"
+            android:text="Female"
             android:textSize="30sp"
             android:visibility="visible"
             android:id="@+id/checkBox"
             app:buttonTint="@android:color/black" />
     </LinearLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,19 +74,15 @@
         android:layout_marginTop="59dp"
         android:layout_below="@+id/linearLayout3"
         android:layout_alignParentStart="true">
-
         <Spinner
             android:layout_width="210dp"
-            android:layout_height="43dp"
+            android:layout_height="40dp"
             android:id="@+id/spin"
             android:entries="@array/planets_array"
             android:dropDownWidth="match_parent"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@android:color/white">
-
         </Spinner>
     </RelativeLayout>
-
-
 </RelativeLayout>
