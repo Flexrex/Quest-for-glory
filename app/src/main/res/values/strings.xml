@@ -21,6 +21,8 @@
         <item>Warrior</item>
         <item>Mage</item>
         <item>Archer</item>
-
     </string-array>
+    <string name="strike_text">Strike\n Damaging enemies \n for 100% attack power</string>
+    <string name="charge_text">Charge\n Damaging enemies \n for 20% attack power</string>
+    <string name="leap_text">Leap\n Damaging enemies \n for 50% attack power</string>
 </resources>
