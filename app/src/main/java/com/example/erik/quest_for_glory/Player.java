@@ -16,8 +16,11 @@ public class Player extends AppCompatActivity implements Serializable
     private int health;
     private int maxHealth;
     private int damage;
+    private int herbs;
+    private int ores;
+    private int soulDust;
 
-    Player(String name, int level, int XP, int XPToNextLevel, int maxHealth, int damage)
+    Player(String name, int level, int XP, int XPToNextLevel, int maxHealth, int damage, int herbs, int ores, int soulDust)
     {
         this.name = name;
         this.level = level;
@@ -26,6 +29,9 @@ public class Player extends AppCompatActivity implements Serializable
         this.maxHealth = maxHealth;
         health = maxHealth;
         this.damage = damage;
+        this.herbs = herbs;
+        this.ores = ores;
+        this.soulDust = soulDust;
     }
 
     Player()
@@ -82,12 +88,15 @@ public class Player extends AppCompatActivity implements Serializable
         health -= amount;
     }
     public int strike() { return damage; }
-    public void setDamage(int damage)
-    {
-        this.damage = damage;
-    }
     public int getDamage()
     {
         return damage;
     }
+    public int getHerbs() { return herbs; }
+    public void increaseHerbs(int amount)
+    {
+        herbs += amount;
+    }
+    public int getOres() { return ores; }
+    public int getSoulDust() { return soulDust; }
 }

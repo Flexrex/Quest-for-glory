@@ -62,6 +62,7 @@ public class TheForest extends AppCompatActivity
             Intent intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
             player.increaseXP(spriggan.getXPYield());
+            player.increaseHerbs(spriggan.getHerbYield());
             if(player.getXP() >= player.getXPToNextLevel())
             {
                 player.levelUp();

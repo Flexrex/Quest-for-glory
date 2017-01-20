@@ -9,15 +9,15 @@ public class chCreate extends AppCompatActivity
 {
     Player player;
     Monster spriggan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_create);
-        player = new Player("Erko", 1, 0, 200, 100, 8);
-        spriggan = new Monster("Spriggan", 1, 50, 80, 5);
+        player = new Player("Erko", 1, 0, 200, 100, 8, 0, 0, 0);
+        spriggan = new Monster("Spriggan", 1, 50, 80, 6, 2, 2, 2);
     }
-
     public void Done(View view)
     {
         Intent intent = new Intent(this, Quests.class);
