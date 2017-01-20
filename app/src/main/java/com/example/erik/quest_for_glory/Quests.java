@@ -36,8 +36,8 @@ public class Quests extends AppCompatActivity
         playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
         forestText = "The Forest\n Level " + spriggan.getLevel();
-        mountainText = "The Mountain\n Level " + spriggan.getMaxLevel();
-        ruinText = "The Ruin\n Level " + spriggan.getMaxLevel();
+        mountainText = "The Mountain\n Level " + 0;
+        ruinText = "The Ruin\n Level " + 0;
         level.setText(playerLevelText);
         XP.setText(playerXPText);
         forest.setText(forestText);

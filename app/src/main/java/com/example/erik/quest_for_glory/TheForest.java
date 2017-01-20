@@ -64,7 +64,6 @@ public class TheForest extends AppCompatActivity
             Bundle bundle = new Bundle();
             spriggan.setHealth(spriggan.getMaxHealth());
             player.setHealth(player.getMaxHealth());
-
             player.increaseXP(spriggan.getXPYield());
             player.increaseHerbs(spriggan.getHerbYield());
             if(player.getXP() >= player.getXPToNextLevel())
