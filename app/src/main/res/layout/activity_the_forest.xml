@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/forest"
     tools:context="com.example.erik.quest_for_glory.TheForest">
+
     <ImageView
     android:layout_width="100dp"
     android:layout_height="150dp"
@@ -18,6 +19,7 @@
     android:layout_marginTop="10dp"
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="true"/>
+
     <ImageView
         android:layout_width="110dp"
         android:layout_height="150dp"

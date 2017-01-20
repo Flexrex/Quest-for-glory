@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/holo_green_dark">
+
     <Button
         android:id="@+id/button"
         android:text="Start"
@@ -14,6 +15,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="Start" />
+
     <Button
         android:id="@+id/button2"
         android:text="Options"
@@ -22,7 +24,8 @@
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
-        android:onClick="Settings"/>
+        android:onClick="Settings" />
+
     <TextView
         android:layout_width="match_parent"
         android:text="Quest for glory"
@@ -33,7 +36,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="76dp"
         android:textAlignment="center"
-        android:id="@+id/textView"/>
+        android:id="@+id/textView" />
+
     <TextView
         android:text="Your journey begins here!"
         android:textAlignment="center"
@@ -44,5 +48,5 @@
         android:textSize="18sp"
         android:textStyle="normal|bold"
         android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

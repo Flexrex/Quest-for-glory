@@ -29,9 +29,9 @@ public class Kingdom extends AppCompatActivity
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
-        String herbsText = "  Herbs: " + player.getHerbs();
-        String oresText = "  Ores: " + player.getOres();
-        String soulDustText = "  Soul Dust: " + player.getSoulDust();
+        String herbsText = "  Herbs: " + (int) player.getHerbs();
+        String oresText = "  Ores: " + (int) player.getOres();
+        String soulDustText = "  Soul Dust: " + (int) player.getSoulDust();
         level.setText(playerLevelText);
         XP.setText(playerXPText);
         herbs.setText(herbsText);

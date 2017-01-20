@@ -48,6 +48,7 @@ public class TheForest extends AppCompatActivity
         {
             player.setHealth(player.getMaxHealth());
             spriggan.setHealth(spriggan.getMaxHealth());
+            spriggan.levelDown();
             Intent intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
             bundle.putSerializable("player", player);
@@ -66,13 +67,18 @@ public class TheForest extends AppCompatActivity
             player.setHealth(player.getMaxHealth());
             player.increaseXP(spriggan.getXPYield());
             player.increaseHerbs(spriggan.getHerbYield());
-            if(player.getXP() >= player.getXPToNextLevel())
-            {
-                player.levelUp();
-            }
             if(spriggan.getLevel() == spriggan.getMaxLevel())
             {
                 spriggan.increaseMaxLevel();
+                spriggan.levelUp();
+            }
+            if(player.getXP() >= player.getXPToNextLevel())
+            {
+                player.levelUp();
+                while(spriggan.getLevel() < spriggan.getMaxLevel())
+                {
+                    spriggan.levelUp();
+                }
             }
             bundle.putSerializable("player", player);
             bundle.putSerializable("spriggan", spriggan);

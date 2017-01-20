@@ -8,6 +8,7 @@
     android:background="@android:color/holo_green_dark"
     tools:context="com.example.erik.quest_for_glory.chCreate"
     android:orientation="vertical">
+
     <EditText
         android:layout_height="40dp"
         android:inputType="textPersonName"
@@ -20,6 +21,7 @@
         android:textSize="30sp"
         android:layout_width="317dp"
         android:textAlignment="center" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -29,6 +31,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:id="@+id/linearLayout2">
+
         <Button
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -37,9 +40,9 @@
             android:textSize="40sp"
             android:background="#a06c0c"
             android:onClick="Done"
-            android:layout_width="0dp"
-            />
+            android:layout_width="0dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,6 +50,7 @@
         android:layout_marginTop="67dp"
         android:layout_below="@+id/inputName"
         android:layout_alignParentStart="true">
+
         <CheckBox
             android:layout_width="150dp"
             android:layout_height="70dp"
@@ -56,6 +60,7 @@
             android:visibility="visible"
             android:layout_marginLeft="40dp"
             app:buttonTint="@android:color/black" />
+
         <CheckBox
             android:layout_width="150dp"
             android:layout_height="70dp"
@@ -66,6 +71,7 @@
             android:id="@+id/checkBox"
             app:buttonTint="@android:color/black" />
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,6 +80,7 @@
         android:layout_marginTop="59dp"
         android:layout_below="@+id/linearLayout3"
         android:layout_alignParentStart="true">
+
         <Spinner
             android:layout_width="210dp"
             android:layout_height="40dp"
