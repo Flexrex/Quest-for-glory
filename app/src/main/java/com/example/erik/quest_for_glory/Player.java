@@ -95,7 +95,7 @@ public class Player extends AppCompatActivity implements Serializable
     }
     public void increaseHerbs(int amount)
     {
-    herbs += amount;
+        herbs += amount;
     }
     public int getHerbs() { return herbs; }
     public int getOres() { return ores; }

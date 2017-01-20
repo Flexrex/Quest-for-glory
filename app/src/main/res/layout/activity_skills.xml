@@ -156,15 +156,31 @@
             android:layout_marginTop="34dp"
             android:id="@+id/leap_image" />
 
-        <TextView
+
+            <TextView
             android:layout_width="200sp"
             android:layout_height="40sp"
             android:layout_alignTop="@+id/leap_image"
             android:layout_alignStart="@+id/charge_info"
             android:id="@+id/leap_info"
             android:layout_alignBottom="@+id/leap_image"
-            android:text="@string/leap_text"/>
+            android:text="@string/leap_text" />
 
+            <ImageView
+                android:layout_width="65sp"
+                android:layout_height="65sp"
+                app:srcCompat="@android:color/black"
+                android:id="@+id/test1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/leap_image" />
+
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="40sp"
+                android:id="@+id/test"
+                android:text="@string/leap_text"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/leap_info" />
 
 
         </RelativeLayout>
