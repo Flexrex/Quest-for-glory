@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -84,15 +85,17 @@
             android:clickable="false"
             android:layout_weight="1" />
     </LinearLayout>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/theForestText"
             android:gravity="center"
-            android:text="Skills"
-            android:textSize="40dp"
             android:layout_width="100dp"
             android:layout_height="375dp"
             android:background="@drawable/border_the_forrest"
@@ -101,8 +104,73 @@
             android:typeface="normal"
             android:textAllCaps="false"
             android:clickable="false"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="40sp"
+            android:text="@string/strike_text"
+            android:ems="10"
+            android:id="@+id/strike_info"
+            android:layout_marginEnd="25dp"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/strike_image"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/strike_image" />
+
+        <ImageView
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            app:srcCompat="@android:color/black"
+            android:id="@+id/strike_image"
+            android:layout_marginTop="29dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="29dp" />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="40sp"
+            android:id="@+id/charge_info"
+            android:layout_alignTop="@+id/charge_image"
+            android:layout_alignStart="@+id/strike_info"
+            android:layout_alignBottom="@+id/charge_image"
+            android:text="@string/charge_text"/>
+
+        <ImageView
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            app:srcCompat="@android:color/black"
+            android:layout_marginTop="30dp"
+            android:id="@+id/charge_image"
+            android:layout_below="@+id/strike_image"
+            android:layout_alignStart="@+id/strike_image" />
+
+        <ImageView
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            app:srcCompat="@android:color/black"
+            android:layout_below="@+id/charge_image"
+            android:layout_alignStart="@+id/charge_image"
+            android:layout_marginTop="34dp"
+            android:id="@+id/leap_image" />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="40sp"
+            android:layout_alignTop="@+id/leap_image"
+            android:layout_alignStart="@+id/charge_info"
+            android:id="@+id/leap_info"
+            android:layout_alignBottom="@+id/leap_image"
+            android:text="@string/leap_text"/>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
