@@ -10,23 +10,39 @@ public class Quests extends AppCompatActivity
 {
     Player player;
     Monster spriggan;
-    TextView levelText;
-    TextView XPText;
+    TextView level;
+    TextView XP;
+    TextView forest;
+    TextView mountain;
+    TextView ruin;
+    String playerLevelText;
+    String playerXPText;
+    String forestText;
+    String mountainText;
+    String ruinText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quests);
-        levelText = (TextView) findViewById(R.id.levelText);
-        XPText = (TextView) findViewById(R.id.XPText);
+        level= (TextView) findViewById(R.id.levelText);
+        XP = (TextView) findViewById(R.id.XPText);
+        forest = (TextView) findViewById(R.id.forest);
+        mountain = (TextView) findViewById(R.id.mountain);
+        ruin = (TextView) findViewById(R.id.ruin) ;
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
-        String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
-
-        levelText.setText(playerLevelText);
-        XPText.setText(playerXPText);
+        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
+        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        forestText = "The Forest\n Level " + spriggan.getLevel();
+        mountainText = "The Mountain\n Level " + spriggan.getMaxLevel();
+        ruinText = "The Ruin\n Level " + spriggan.getMaxLevel();
+        level.setText(playerLevelText);
+        XP.setText(playerXPText);
+        forest.setText(forestText);
+        mountain.setText(mountainText);
+        ruin.setText((ruinText));
     }
     public void theForest(View view)
     {
@@ -36,6 +52,26 @@ public class Quests extends AppCompatActivity
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+    public void increaseTheForestLevel(View view)
+    {
+        spriggan.levelUp();
+        if(spriggan.getLevel() > spriggan.getMaxLevel())
+        {
+            spriggan.levelDown();
+        }
+        forestText = "The Forest\n Level " + spriggan.getLevel();
+        forest.setText(forestText);
+    }
+    public void decreaseTheForestLevel(View view)
+    {
+        spriggan.levelDown();
+        if(spriggan.getLevel() == 0)
+        {
+            spriggan.levelUp();
+        }
+        forestText = "The Forest\n Level " + spriggan.getLevel();
+        forest.setText(forestText);
     }
     public void greed(View view)
     {

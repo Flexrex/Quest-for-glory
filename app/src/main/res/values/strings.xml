@@ -6,11 +6,11 @@
     <string name="inventory_text">Inventory</string>
     <string name="skills_text">Skills</string>
     <string name="quest_1_text">Quest: kill 1 spriggan in The Forest</string>
-    <string name="the_forest_text">The Forest</string>
+    <string name="forest_text">Forest</string>
     <string name="the_forest_text_rewards">Rewards Herbs</string>
-    <string name="the_mountain_text">The Mountain</string>
+    <string name="mountain_text">Mountain Level 1</string>
     <string name="the_mountain_text_rewards">Rewards Ores</string>
-    <string name="the_ruin_text">The Ruin</string>
+    <string name="ruin_text">Ruin Level 1</string>
     <string name="the_ruin_text_rewards">Rewards Soul Dust</string>
     <string name="title_activity_settings">Settings</string>
     <string name="gear_text">Gear</string>

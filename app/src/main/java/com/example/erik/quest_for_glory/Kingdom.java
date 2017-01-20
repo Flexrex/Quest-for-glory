@@ -10,21 +10,21 @@ public class Kingdom extends AppCompatActivity
 {
     Player player;
     Monster spriggan;
-    TextView levelText;
-    TextView XPText;
-    TextView herbsBar;
-    TextView oresBar;
-    TextView soulDustBar;
+    TextView level;
+    TextView XP;
+    TextView herbs;
+    TextView ores;
+    TextView soulDust;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kingdom);
-        levelText = (TextView) findViewById(R.id.levelText);
-        XPText = (TextView) findViewById(R.id.XPText);
-        herbsBar = (TextView) findViewById(R.id.herbs);
-        oresBar = (TextView) findViewById(R.id.ores);
-        soulDustBar = (TextView) findViewById(R.id.soulDust);
+        level = (TextView) findViewById(R.id.levelText);
+        XP = (TextView) findViewById(R.id.XPText);
+        herbs = (TextView) findViewById(R.id.herbs);
+        ores = (TextView) findViewById(R.id.ores);
+        soulDust = (TextView) findViewById(R.id.soulDust);
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         getIntent().getSerializableExtra("ores");
@@ -34,11 +34,11 @@ public class Kingdom extends AppCompatActivity
         String herbsText = "  Herbs: " + player.getHerbs();
         String oresText = "  Ores: " + player.getOres();
         String soulDustText = "  Soul Dust: " + player.getSoulDust();
-        levelText.setText(playerLevelText);
-        XPText.setText(playerXPText);
-        herbsBar.setText(herbsText);
-        oresBar.setText(oresText);
-        soulDustBar.setText(soulDustText);
+        level.setText(playerLevelText);
+        XP.setText(playerXPText);
+        herbs.setText(herbsText);
+        ores.setText(oresText);
+        soulDust.setText(soulDustText);
     }
     public void greed(View view)
     {

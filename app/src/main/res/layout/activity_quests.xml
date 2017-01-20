@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/quest1Text"
+            android:id="@+id/quest_1"
             android:gravity="center"
             android:text="@string/quest_1_text"
             android:textSize="20dp"
@@ -108,13 +108,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/arrow_back"
+            android:id="@+id/forestLevelBack"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_the_forrest"
+            android:onClick="decreaseTheForestLevel"
+            android:layout_alignStart="@+id/spriggan" />
         <TextView
-            android:id="@+id/theForestText"
+            android:id="@+id/forest"
             android:gravity="center"
-            android:text="@string/the_forest_text"
-            android:textSize="40dp"
+            android:text="@string/forest_text"
+            android:textSize="30dp"
             android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_height="75dp"
             android:background="@drawable/border_the_forrest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -123,18 +132,27 @@
             android:clickable="true"
             android:onClick="theForest"
             android:layout_weight="1" />
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/arrow_forward"
+            android:id="@+id/theForestLevelForward"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_the_forrest"
+            android:onClick="increaseTheForestLevel"
+            android:layout_alignStart="@+id/spriggan" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/theForestTextRewards"
+            android:id="@+id/forestRewards"
             android:gravity="center"
             android:text="@string/the_forest_text_rewards"
             android:textSize="25dp"
             android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/border_the_forrest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -148,13 +166,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/arrow_back"
+            android:id="@+id/mountainLevelBack"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_the_mountain"
+            android:layout_alignStart="@+id/spriggan" />
+
         <TextView
-            android:id="@+id/theMountainText"
+            android:id="@+id/mountain"
             android:gravity="center"
-            android:text="@string/the_mountain_text"
-            android:textSize="40dp"
+            android:text="@string/mountain_text"
+            android:textSize="30dp"
             android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_height="75dp"
             android:background="@drawable/border_the_mountain"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -162,18 +190,26 @@
             android:textAllCaps="false"
             android:clickable="false"
             android:layout_weight="1" />
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/arrow_forward"
+            android:id="@+id/mountainLevelForward"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_the_mountain"
+            android:layout_alignStart="@+id/spriggan" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/theMountainTextRewards"
+            android:id="@+id/mountainRewards"
             android:gravity="center"
             android:text="@string/the_mountain_text_rewards"
             android:textSize="25dp"
             android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/border_the_mountain"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -186,13 +222,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/arrow_back"
+            android:id="@+id/ruinLevelBack"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_the_ruin"
+            android:layout_alignStart="@+id/spriggan" />
         <TextView
-            android:id="@+id/theRuinText"
+            android:id="@+id/ruin"
             android:gravity="center"
-            android:text="@string/the_ruin_text"
-            android:textSize="40dp"
+            android:text="@string/ruin_text"
+            android:textSize="30dp"
             android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_height="75dp"
             android:background="@drawable/border_the_ruin"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -200,18 +244,26 @@
             android:textAllCaps="false"
             android:clickable="false"
             android:layout_weight="1" />
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/arrow_forward"
+            android:id="@+id/ruinLevelForward"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_the_ruin"
+            android:layout_alignStart="@+id/spriggan" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/theRuinTextRewards"
+            android:id="@+id/ruinRewards"
             android:gravity="center"
             android:text="@string/the_ruin_text_rewards"
             android:textSize="25dp"
             android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/border_the_ruin"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"

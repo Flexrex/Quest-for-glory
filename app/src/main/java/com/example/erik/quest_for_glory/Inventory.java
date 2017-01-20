@@ -10,24 +10,24 @@ public class Inventory extends AppCompatActivity
 {
     Player player;
     Monster spriggan;
-    TextView levelText;
-    TextView XPText;
+    TextView level;
+    TextView XP;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventory);
-        levelText = (TextView) findViewById(R.id.levelText);
-        XPText = (TextView) findViewById(R.id.XPText);
+        level = (TextView) findViewById(R.id.levelText);
+        XP = (TextView) findViewById(R.id.XPText);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
 
-        String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        String LevelText = getString(R.string.level_text ) + " " + player.getLevel();
+        String XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
 
-        levelText.setText(playerLevelText);
-        XPText.setText(playerXPText);
+        level.setText(LevelText);
+        XP.setText(XPText);
     }
     public void greed(View view)
     {

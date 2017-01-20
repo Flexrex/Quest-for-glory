@@ -9,19 +9,21 @@ import java.io.Serializable;
 public class Monster extends AppCompatActivity implements Serializable
 {
     private String name;
+    private int maxLevel;
     private int level;
     private int XPYield;
-    private int health;
-    private int maxHealth;
-    private int damage;
+    private double maxHealth;
+    private double health;
+    private double damage;
     private int herbYield;
     private int oreYield;
     private int soulDustYield;
 
-    Monster(String name, int level, int XPYield, int maxHealth, int damage, int herbYield, int oreYield, int soulDustYield)
+    Monster(String name, int maxLevel, int XPYield, int maxHealth, double damage, int herbYield, int oreYield, int soulDustYield)
     {
         this.name = name;
-        this.level = level;
+        this.maxLevel = maxLevel;
+        level = maxLevel;
         this.XPYield = XPYield;
         this.maxHealth = maxHealth;
         health = maxHealth;
@@ -50,6 +52,8 @@ public class Monster extends AppCompatActivity implements Serializable
     {
         return name;
     }
+    public int getMaxLevel() { return maxLevel; }
+    public void increaseMaxLevel() { maxLevel += 1; }
     public int getLevel()
     {
         return level;
@@ -63,6 +67,7 @@ public class Monster extends AppCompatActivity implements Serializable
     {
         level += 1;
         maxHealth *= 1.4;
+        health = maxHealth;
         damage *= 1.4;
         herbYield *= 1.5;
     }
@@ -70,23 +75,24 @@ public class Monster extends AppCompatActivity implements Serializable
     {
         level -= 1;
         maxHealth /= 1.4;
+        health = maxHealth;
         damage /= 1.4;
         herbYield /= 1.5;
     }
-    public void setHealth(int health)
+    public void setHealth(double health)
     {
         this.health = health;
     }
-    public int getHealth()
+    public double getMaxHealth() { return maxHealth; }
+    public double getHealth()
     {
         return health;
     }
-    public int getMaxHealth() { return maxHealth; }
-    public void takeDamage(int damage)
+    public void takeDamage(double damage)
     {
         health -= damage;
     }
-    public int getDamage()
+    public double getDamage()
     {
         return damage;
     }

@@ -13,14 +13,14 @@ public class Player extends AppCompatActivity implements Serializable
     private int level;
     private int XP;
     private int XPToNextLevel;
-    private int health;
-    private int maxHealth;
-    private int damage;
+    private double maxHealth;
+    private double health;
+    private double damage;
     private int herbs;
     private int ores;
     private int soulDust;
 
-    Player(String name, int level, int XP, int XPToNextLevel, int maxHealth, int damage, int herbs, int ores, int soulDust)
+    Player(String name, int level, int XP, int XPToNextLevel, double maxHealth, double damage, int herbs, int ores, int soulDust)
     {
         this.name = name;
         this.level = level;
@@ -67,6 +67,7 @@ public class Player extends AppCompatActivity implements Serializable
         XP = XP - XPToNextLevel;
         XPToNextLevel = (XPToNextLevel * 2);
         maxHealth *= 1.2;
+        health = maxHealth;
         damage *= 1.2;
     }
     public int getXP()
@@ -74,29 +75,29 @@ public class Player extends AppCompatActivity implements Serializable
         return XP;
     }
     public int getXPToNextLevel() { return XPToNextLevel; }
-    public void setHealth(int health)
+    public void setHealth(double health)
     {
         this.health = health;
     }
-    public int getHealth()
+    public double getMaxHealth() { return maxHealth; }
+    public double getHealth()
     {
         return health;
     }
-    public int getMaxHealth() { return maxHealth; }
-    public void takeDamage(int amount)
+    public void takeDamage(double amount)
     {
         health -= amount;
     }
-    public int strike() { return damage; }
-    public int getDamage()
+    public double strike() { return damage; }
+    public double getDamage()
     {
         return damage;
     }
-    public int getHerbs() { return herbs; }
     public void increaseHerbs(int amount)
     {
-        herbs += amount;
+    herbs += amount;
     }
+    public int getHerbs() { return herbs; }
     public int getOres() { return ores; }
     public int getSoulDust() { return soulDust; }
 }

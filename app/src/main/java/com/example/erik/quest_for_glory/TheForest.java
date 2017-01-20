@@ -21,23 +21,24 @@ public class TheForest extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_the_forest);
-        playerHealthBar = (TextView) findViewById(R.id.playerHealthBar);
-        sprigganHealthBar = (TextView) findViewById(R.id.sprigganHealthBar);
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
-        playerHealthText = "Health: " + player.getHealth();
-        sprigganHealthText = "Health: " + spriggan.getHealth();
+        playerHealthBar = (TextView) findViewById(R.id.playerHealthBar);
+        sprigganHealthBar = (TextView) findViewById(R.id.sprigganHealthBar);
+
+        playerHealthText = "Health: " + (int) player.getHealth();
+        sprigganHealthText = "Health: " + (int) spriggan.getHealth();
         playerHealthBar.setText(playerHealthText);
         sprigganHealthBar.setText(sprigganHealthText);
     }
     public void strike(View view)
     {
         spriggan.takeDamage(player.strike());
-        sprigganHealthText = "Health: " + spriggan.getHealth();
+        sprigganHealthText = "Health: " + (int) spriggan.getHealth();
         sprigganHealthBar.setText(sprigganHealthText);
         checkSprigganAlive();
         player.takeDamage(spriggan.getDamage());
-        playerHealthText = "Health: " + player.getHealth();
+        playerHealthText = "Health: " + (int) player.getHealth();
         playerHealthBar.setText(playerHealthText);
         checkPlayerAlive();
     }
@@ -45,10 +46,10 @@ public class TheForest extends AppCompatActivity
     {
         if(player.getHealth() <= 0)
         {
-            Intent intent = new Intent(this, Quests.class);
-            Bundle bundle = new Bundle();
             player.setHealth(player.getMaxHealth());
             spriggan.setHealth(spriggan.getMaxHealth());
+            Intent intent = new Intent(this, Quests.class);
+            Bundle bundle = new Bundle();
             bundle.putSerializable("player", player);
             bundle.putSerializable("spriggan", spriggan);
             intent.putExtras(bundle);
@@ -61,15 +62,19 @@ public class TheForest extends AppCompatActivity
         {
             Intent intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
+            spriggan.setHealth(spriggan.getMaxHealth());
+            player.setHealth(player.getMaxHealth());
+
             player.increaseXP(spriggan.getXPYield());
             player.increaseHerbs(spriggan.getHerbYield());
             if(player.getXP() >= player.getXPToNextLevel())
             {
                 player.levelUp();
-                spriggan.levelUp();
             }
-            player.setHealth(player.getMaxHealth());
-            spriggan.setHealth(spriggan.getMaxHealth());
+            if(spriggan.getLevel() == spriggan.getMaxLevel())
+            {
+                spriggan.increaseMaxLevel();
+            }
             bundle.putSerializable("player", player);
             bundle.putSerializable("spriggan", spriggan);
             intent.putExtras(bundle);
