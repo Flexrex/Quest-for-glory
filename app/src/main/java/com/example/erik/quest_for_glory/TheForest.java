@@ -29,7 +29,6 @@ public class TheForest extends AppCompatActivity
         sprigganHealthText = "Health: " + spriggan.getHealth();
         playerHealthBar.setText(playerHealthText);
         sprigganHealthBar.setText(sprigganHealthText);
-        spriggan.setDamage(6);
     }
     public void strike(View view)
     {
@@ -66,6 +65,7 @@ public class TheForest extends AppCompatActivity
             if(player.getXP() >= player.getXPToNextLevel())
             {
                 player.levelUp();
+                spriggan.levelUp();
             }
             player.setHealth(player.getMaxHealth());
             spriggan.setHealth(spriggan.getMaxHealth());

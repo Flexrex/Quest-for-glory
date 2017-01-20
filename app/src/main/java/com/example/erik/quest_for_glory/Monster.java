@@ -59,6 +59,8 @@ public class Monster extends AppCompatActivity implements Serializable
     public void levelUp()
     {
         level += 1;
+        maxHealth *= 1.5;
+        damage *= 1.5;
     }
     public void setHealth(int health)
     {

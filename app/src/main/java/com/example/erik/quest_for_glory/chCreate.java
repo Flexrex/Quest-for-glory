@@ -15,7 +15,7 @@ public class chCreate extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_create);
         player = new Player("Erko", 1, 0, 200, 100, 8);
-        spriggan = new Monster("Spriggan", 1, 50, 80, 6);
+        spriggan = new Monster("Spriggan", 1, 50, 80, 5);
     }
 
     public void Done(View view)
