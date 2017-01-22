@@ -6,32 +6,46 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Greed extends AppCompatActivity
+public class Alchemy extends AppCompatActivity
 {
     Intent intent;
     Bundle bundle;
     Player player;
     Monster spriggan;
-    TextView level;
-    TextView XP;
-    String LevelText;
-    String XPText;
+    TextView levelText;
+    TextView XPText;
+    TextView herbs;
+    TextView gold;
+    String playerLevelText;
+    String playerXPText;
+    String goldText;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_greed);
-        level = (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
+        setContentView(R.layout.activity_alchemy);
+        levelText = (TextView) findViewById(R.id.levelText);
+        XPText = (TextView) findViewById(R.id.XPText);
+        herbs = (TextView) findViewById(R.id.herbs);
+        gold = (TextView) findViewById(R.id.gold);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
 
-        LevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
+        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
 
-        level.setText(LevelText);
-        XP.setText(XPText);
+        levelText.setText(playerLevelText);
+        XPText.setText(playerXPText);
+    }
+    public void greed(View view)
+    {
+        intent = new Intent(this, Greed.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
     public void inventory(View view)
     {

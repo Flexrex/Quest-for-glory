@@ -32,12 +32,6 @@ public class Monster extends AppCompatActivity implements Serializable
         this.oreYield = oreYield;
         this.soulDustYield = soulDustYield;
     }
-
-    Monster()
-    {
-
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

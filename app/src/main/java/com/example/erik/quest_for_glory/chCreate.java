@@ -7,6 +7,8 @@ import android.view.View;
 
 public class chCreate extends AppCompatActivity
 {
+    Intent intent;
+    Bundle bundle;
     Player player;
     Monster spriggan;
 
@@ -20,8 +22,8 @@ public class chCreate extends AppCompatActivity
     }
     public void Done(View view)
     {
-        Intent intent = new Intent(this, Quests.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Quests.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);

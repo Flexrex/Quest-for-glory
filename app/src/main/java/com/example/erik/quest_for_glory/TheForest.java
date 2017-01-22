@@ -8,15 +8,15 @@ import android.widget.TextView;
 
 public class TheForest extends AppCompatActivity
 {
+    Intent intent;
+    Bundle bundle;
     Player player;
     Monster spriggan;
     TextView playerHealthBar;
     TextView sprigganHealthBar;
     String playerHealthText;
     String sprigganHealthText;
-    Thread thread;
     @Override
-
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -46,10 +46,10 @@ public class TheForest extends AppCompatActivity
     {
         if(player.getHealth() <= 0)
         {
+            intent = new Intent(this, Quests.class);
             player.setHealth(player.getMaxHealth());
             spriggan.setHealth(spriggan.getMaxHealth());
             spriggan.levelDown();
-            Intent intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
             bundle.putSerializable("player", player);
             bundle.putSerializable("spriggan", spriggan);
@@ -61,7 +61,7 @@ public class TheForest extends AppCompatActivity
     {
         if(spriggan.getHealth() <= 0)
         {
-            Intent intent = new Intent(this, Quests.class);
+            intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
             spriggan.setHealth(spriggan.getMaxHealth());
             player.setHealth(player.getMaxHealth());

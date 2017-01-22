@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 public class Quests extends AppCompatActivity
 {
+    Intent intent;
+    Bundle bundle;
     Player player;
     Monster spriggan;
     TextView level;
@@ -46,8 +48,8 @@ public class Quests extends AppCompatActivity
     }
     public void theForest(View view)
     {
-        Intent intent = new Intent(this, TheForest.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, TheForest.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -75,8 +77,8 @@ public class Quests extends AppCompatActivity
     }
     public void greed(View view)
     {
-        Intent intent = new Intent(this, Greed.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Greed.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -84,8 +86,8 @@ public class Quests extends AppCompatActivity
     }
     public void inventory(View view)
     {
-        Intent intent = new Intent(this, Inventory.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Inventory.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -93,8 +95,8 @@ public class Quests extends AppCompatActivity
     }
     public void skills(View view)
     {
-        Intent intent = new Intent(this, Skills.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Skills.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -102,8 +104,8 @@ public class Quests extends AppCompatActivity
     }
     public void gear(View view)
     {
-        Intent intent = new Intent(this, Gear.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Gear.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -111,17 +113,8 @@ public class Quests extends AppCompatActivity
     }
     public void kingdom(View view)
     {
-        Intent intent = new Intent(this, Kingdom.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("player", player);
-        bundle.putSerializable("spriggan", spriggan);
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
-    public void quests(View view)
-    {
-        Intent intent = new Intent(this, Quests.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Kingdom.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);

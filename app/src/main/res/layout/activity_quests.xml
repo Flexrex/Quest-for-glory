@@ -15,22 +15,23 @@
             android:id="@+id/levelText"
             android:text="@string/level_text"
             android:gravity="center"
-            android:textSize="20dp"
-            android:layout_width="120dp"
-            android:layout_height="37dp"
+            android:textSize="23dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
             android:typeface="normal"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/XPText"
             android:text="@string/XP_text"
             android:gravity="center"
-            android:textSize="20dp"
-            android:layout_width="50dp"
-            android:layout_height="37dp"
+            android:textSize="23dp"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -48,7 +49,7 @@
             android:id="@+id/greedText"
             android:gravity="center"
             android:text="@string/greed_text"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -64,7 +65,7 @@
             android:id="@+id/inventoryText"
             android:gravity="center"
             android:text="@string/inventory_text"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -80,7 +81,7 @@
             android:id="@+id/skillsText"
             android:gravity="center"
             android:text="@string/skills_text"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -102,7 +103,7 @@
             android:id="@+id/quest_1"
             android:gravity="center"
             android:text="@string/quest_1_text"
-            android:textSize="20dp"
+            android:textSize="21dp"
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:background="@drawable/border_quest"
@@ -120,8 +121,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
             android:src="@drawable/arrow_back"
             android:id="@+id/forestLevelBack"
             android:layout_alignParentBottom="true"
@@ -135,7 +136,7 @@
             android:text="@string/forest_text"
             android:textSize="30dp"
             android:layout_width="100dp"
-            android:layout_height="75dp"
+            android:layout_height="74dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -146,8 +147,8 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
             android:src="@drawable/arrow_forward"
             android:id="@+id/theForestLevelForward"
             android:layout_alignParentBottom="true"
@@ -165,7 +166,7 @@
             android:id="@+id/forestRewards"
             android:gravity="center"
             android:text="@string/the_forest_text_rewards"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:background="@drawable/border_the_forest"
@@ -184,8 +185,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
             android:src="@drawable/arrow_back"
             android:id="@+id/mountainLevelBack"
             android:layout_alignParentBottom="true"
@@ -198,7 +199,7 @@
             android:text="@string/mountain_text"
             android:textSize="30dp"
             android:layout_width="100dp"
-            android:layout_height="75dp"
+            android:layout_height="74dp"
             android:background="@drawable/border_the_mountain"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -208,8 +209,8 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
             android:src="@drawable/arrow_forward"
             android:id="@+id/mountainLevelForward"
             android:layout_alignParentBottom="true"
@@ -226,7 +227,7 @@
             android:id="@+id/mountainRewards"
             android:gravity="center"
             android:text="@string/the_mountain_text_rewards"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:background="@drawable/border_the_mountain"
@@ -244,8 +245,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
             android:src="@drawable/arrow_back"
             android:id="@+id/ruinLevelBack"
             android:layout_alignParentBottom="true"
@@ -258,7 +259,7 @@
             android:text="@string/ruin_text"
             android:textSize="30dp"
             android:layout_width="100dp"
-            android:layout_height="75dp"
+            android:layout_height="74dp"
             android:background="@drawable/border_the_ruin"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -268,8 +269,8 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
             android:src="@drawable/arrow_forward"
             android:id="@+id/ruinLevelForward"
             android:layout_alignParentBottom="true"
@@ -286,7 +287,7 @@
             android:id="@+id/ruinRewards"
             android:gravity="center"
             android:text="@string/the_ruin_text_rewards"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:background="@drawable/border_the_ruin"
@@ -307,7 +308,7 @@
             android:id="@+id/gearText"
             android:gravity="center"
             android:text="@string/gear_text"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -323,7 +324,7 @@
             android:id="@+id/kingdomText"
             android:gravity="center"
             android:text="@string/kingdom_text"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -339,7 +340,7 @@
             android:id="@+id/questsText"
             android:gravity="center"
             android:text="@string/quests_text"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus_highlight"

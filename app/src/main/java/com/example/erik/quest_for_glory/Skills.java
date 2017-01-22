@@ -8,10 +8,14 @@ import android.widget.TextView;
 
 public class Skills extends AppCompatActivity
 {
+    Intent intent;
+    Bundle bundle;
     Player player;
     Monster spriggan;
     TextView levelText;
     TextView XPText;
+    String playerLevelText;
+    String playerXPText;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -23,16 +27,16 @@ public class Skills extends AppCompatActivity
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
 
-        String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
+        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
 
         levelText.setText(playerLevelText);
         XPText.setText(playerXPText);
     }
     public void greed(View view)
     {
-        Intent intent = new Intent(this, Greed.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Greed.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -40,17 +44,8 @@ public class Skills extends AppCompatActivity
     }
     public void inventory(View view)
     {
-        Intent intent = new Intent(this, Inventory.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("player", player);
-        bundle.putSerializable("spriggan", spriggan);
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
-    public void skills(View view)
-    {
-        Intent intent = new Intent(this, Skills.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Inventory.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -58,8 +53,8 @@ public class Skills extends AppCompatActivity
     }
     public void gear(View view)
     {
-        Intent intent = new Intent(this, Gear.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Gear.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -67,8 +62,8 @@ public class Skills extends AppCompatActivity
     }
     public void kingdom(View view)
     {
-        Intent intent = new Intent(this, Kingdom.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Kingdom.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -76,8 +71,8 @@ public class Skills extends AppCompatActivity
     }
     public void quests(View view)
     {
-        Intent intent = new Intent(this, Quests.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Quests.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);

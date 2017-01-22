@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 public class Kingdom extends AppCompatActivity
 {
+    Intent intent;
+    Bundle bundle;
     Player player;
     Monster spriggan;
     TextView level;
@@ -15,6 +17,11 @@ public class Kingdom extends AppCompatActivity
     TextView herbs;
     TextView ores;
     TextView soulDust;
+    String playerLevelText;
+    String playerXPText;
+    String herbsText;
+    String oresText;
+    String soulDustText;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -27,21 +34,30 @@ public class Kingdom extends AppCompatActivity
         soulDust = (TextView) findViewById(R.id.soulDust);
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
-        String playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        String playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
-        String herbsText = "  Herbs: " + (int) player.getHerbs();
-        String oresText = "  Ores: " + (int) player.getOres();
-        String soulDustText = "  Soul Dust: " + (int) player.getSoulDust();
+        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
+        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        herbsText = " Herbs: " + (int) player.getHerbs();
+        oresText = " Ores: " + (int) player.getOres();
+        soulDustText = " Soul Dust: " + (int) player.getSoulDust();
         level.setText(playerLevelText);
         XP.setText(playerXPText);
         herbs.setText(herbsText);
         ores.setText(oresText);
         soulDust.setText(soulDustText);
     }
+    public void alchemy(View view)
+    {
+        intent = new Intent(this, Alchemy.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
     public void greed(View view)
     {
-        Intent intent = new Intent(this, Greed.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Greed.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -49,8 +65,8 @@ public class Kingdom extends AppCompatActivity
     }
     public void inventory(View view)
     {
-        Intent intent = new Intent(this, Inventory.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Inventory.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -58,8 +74,8 @@ public class Kingdom extends AppCompatActivity
     }
     public void skills(View view)
     {
-        Intent intent = new Intent(this, Skills.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Skills.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -67,17 +83,8 @@ public class Kingdom extends AppCompatActivity
     }
     public void gear(View view)
     {
-        Intent intent = new Intent(this, Gear.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("player", player);
-        bundle.putSerializable("spriggan", spriggan);
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
-    public void kingdom(View view)
-    {
-        Intent intent = new Intent(this, Kingdom.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Gear.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
@@ -85,8 +92,8 @@ public class Kingdom extends AppCompatActivity
     }
     public void quests(View view)
     {
-        Intent intent = new Intent(this, Quests.class);
-        Bundle bundle = new Bundle();
+        intent = new Intent(this, Quests.class);
+        bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
         intent.putExtras(bundle);
