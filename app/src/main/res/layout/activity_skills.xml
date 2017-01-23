@@ -6,33 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/levelText"
             android:text="@string/level_text"
             android:gravity="center"
-            android:textSize="23dp"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_width="120dp"
+            android:layout_height="37dp"
             android:background="@drawable/border_level_xp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
             android:typeface="normal"
-            android:textAllCaps="false"
-            android:layout_weight="1" />
-
+            android:textAllCaps="false" />
         <TextView
             android:id="@+id/XPText"
             android:text="@string/XP_text"
             android:gravity="center"
-            android:textSize="23dp"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_width="50dp"
+            android:layout_height="37dp"
             android:background="@drawable/border_level_xp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -40,17 +36,15 @@
             android:textAllCaps="false"
             android:layout_weight="1" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/greedText"
             android:gravity="center"
             android:text="@string/greed_text"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -61,12 +55,11 @@
             android:clickable="false"
             android:onClick="greed"
             android:layout_weight="1" />
-
         <TextView
             android:id="@+id/inventoryText"
             android:gravity="center"
             android:text="@string/inventory_text"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -77,12 +70,11 @@
             android:clickable="false"
             android:onClick="inventory"
             android:layout_weight="1" />
-
         <TextView
             android:id="@+id/skillsText"
             android:gravity="center"
             android:text="@string/skills_text"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus_highlight"
@@ -93,156 +85,117 @@
             android:clickable="false"
             android:layout_weight="1" />
     </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="372dp"
-        android:background="@drawable/border_the_forest">
+        android:layout_height="375dp"
+        android:fillViewport="false">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/theForestText"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="375dp"
+            android:background="@drawable/border_the_forest"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
 
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:id="@+id/strike_image"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="40sp"
+            android:text="@string/strike_text"
+            android:ems="10"
+            android:id="@+id/strike_info"
+            android:layout_marginEnd="25dp"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/strike_image"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/strike_image" />
 
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:text="@string/strike_text"
-                    android:id="@+id/strike_info"
-                    android:layout_marginTop="34dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:layout_alignTop="@+id/strike_image"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignBottom="@+id/strike_image" />
-            </LinearLayout>
+        <ImageView
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            app:srcCompat="@android:color/black"
+            android:id="@+id/strike_image"
+            android:layout_marginTop="29dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="29dp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="40sp"
+            android:id="@+id/charge_info"
+            android:layout_alignTop="@+id/charge_image"
+            android:layout_alignStart="@+id/strike_info"
+            android:layout_alignBottom="@+id/charge_image"
+            android:text="@string/charge_text"/>
 
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:id="@+id/leap_image" />
+        <ImageView
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            app:srcCompat="@android:color/black"
+            android:layout_marginTop="30dp"
+            android:id="@+id/charge_image"
+            android:layout_below="@+id/strike_image"
+            android:layout_alignStart="@+id/strike_image" />
 
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:text="@string/charge_text" />
-            </LinearLayout>
+        <ImageView
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            app:srcCompat="@android:color/black"
+            android:layout_below="@+id/charge_image"
+            android:layout_alignStart="@+id/charge_image"
+            android:layout_marginTop="34dp"
+            android:id="@+id/leap_image" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
 
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:id="@+id/leap_image" />
+            <TextView
+            android:layout_width="200sp"
+            android:layout_height="40sp"
+            android:layout_alignTop="@+id/leap_image"
+            android:layout_alignStart="@+id/charge_info"
+            android:id="@+id/leap_info"
+            android:layout_alignBottom="@+id/leap_image"
+            android:text="@string/leap_text" />
 
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:text="@string/charge_text" />
-            </LinearLayout>
+            <ImageView
+                android:layout_width="65sp"
+                android:layout_height="65sp"
+                app:srcCompat="@android:color/black"
+                android:id="@+id/test1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/leap_image" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="40sp"
+                android:id="@+id/test"
+                android:text="@string/leap_text"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/leap_info" />
 
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:id="@+id/leap_image" />
-
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:text="@string/charge_text" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:id="@+id/leap_image" />
-
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:text="@string/charge_text" />
-            </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/gearText"
             android:gravity="center"
             android:text="@string/gear_text"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -253,12 +206,11 @@
             android:clickable="false"
             android:onClick="gear"
             android:layout_weight="1" />
-
         <TextView
             android:id="@+id/kingdomText"
             android:gravity="center"
             android:text="@string/kingdom_text"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -269,12 +221,11 @@
             android:clickable="false"
             android:onClick="kingdom"
             android:layout_weight="1" />
-
         <TextView
             android:id="@+id/questsText"
             android:gravity="center"
             android:text="@string/quests_text"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
