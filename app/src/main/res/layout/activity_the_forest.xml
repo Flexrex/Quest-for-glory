@@ -42,15 +42,16 @@
         android:onClick="strike"/>
 
     <TextView
-        android:layout_width="100sp"
+        android:layout_width="52sp"
         android:layout_height="wrap_content"
-        android:id="@+id/strike_image"
-        android:text="Health Potion"
+        android:id="@+id/HP"
+        android:text="HP(1000)"
+        android:textSize="12sp"
         android:gravity="center"
         android:background="@drawable/border_health"
         android:layout_above="@+id/playerHealthBar"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="19dp" />
+        android:onClick="useHealthPotion"/>
 
     <TextView
         android:layout_width="150dp"

@@ -19,8 +19,8 @@ public class chCreate extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_create);
         player = new Player("Erko", 1, 0, 200, 100, 8, 0, 0, 0, 0);
-        spriggan = new Monster("Spriggan", 1, 50, 70, 3, 6, 2, 2, 2);
-        healthPotion = new Potion("")
+        spriggan = new Monster("Spriggan", 1, 50, 80, 3, 6, 2, 2, 2);
+        healthPotion = new Potion(1, 0, 50, 12, 9, 3, 60, 0, 0, 0);
 
     }
     public void Done(View view)
@@ -29,6 +29,7 @@ public class chCreate extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }

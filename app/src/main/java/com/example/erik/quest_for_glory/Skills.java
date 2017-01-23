@@ -12,26 +12,28 @@ public class Skills extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
-    TextView levelText;
-    TextView XPText;
-    String playerLevelText;
-    String playerXPText;
+    Potion healthPotion;
+    TextView level;
+    TextView XP;
+    String levelText;
+    String XPText;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skills);
-        levelText = (TextView) findViewById(R.id.levelText);
-        XPText = (TextView) findViewById(R.id.XPText);
+        level = (TextView) findViewById(R.id.levelText);
+        XP = (TextView) findViewById(R.id.XPText);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
+        healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
-        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        levelText = getString(R.string.level_text ) + " " + player.getLevel();
+        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
 
-        levelText.setText(playerLevelText);
-        XPText.setText(playerXPText);
+        level.setText(levelText);
+        XP.setText(XPText);
     }
     public void greed(View view)
     {
@@ -39,6 +41,7 @@ public class Skills extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -48,6 +51,7 @@ public class Skills extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -57,6 +61,7 @@ public class Skills extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -66,6 +71,7 @@ public class Skills extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -75,6 +81,7 @@ public class Skills extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }

@@ -12,6 +12,7 @@ public class Gear extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
+    Potion healthPotion;
     TextView levelText;
     TextView XPText;
     String playerLevelText;
@@ -26,6 +27,7 @@ public class Gear extends AppCompatActivity
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
+        healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
         playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();

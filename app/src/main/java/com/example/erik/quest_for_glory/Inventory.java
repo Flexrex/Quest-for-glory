@@ -12,6 +12,7 @@ public class Inventory extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
+    Potion healthPotion;
     TextView level;
     TextView XP;
     String LevelText;
@@ -26,6 +27,7 @@ public class Inventory extends AppCompatActivity
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
+        healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
         LevelText = getString(R.string.level_text ) + " " + player.getLevel();
         XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
@@ -39,6 +41,7 @@ public class Inventory extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -48,6 +51,7 @@ public class Inventory extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -57,6 +61,7 @@ public class Inventory extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -66,6 +71,7 @@ public class Inventory extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -75,6 +81,7 @@ public class Inventory extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }

@@ -15,7 +15,7 @@
             android:id="@+id/levelText"
             android:text="@string/level_text"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -29,7 +29,7 @@
             android:id="@+id/XPText"
             android:text="@string/XP_text"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -49,7 +49,7 @@
             android:id="@+id/greedText"
             android:gravity="center"
             android:text="@string/greed_text"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -65,7 +65,7 @@
             android:id="@+id/inventoryText"
             android:gravity="center"
             android:text="@string/inventory_text"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -81,7 +81,7 @@
             android:id="@+id/skillsText"
             android:gravity="center"
             android:text="@string/skills_text"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -102,7 +102,7 @@
         <TextView
             android:id="@+id/herbs"
             android:text=" Herbs: "
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="33dp"
             android:background="@drawable/border_the_forest"
@@ -122,7 +122,7 @@
         <TextView
             android:id="@+id/gold"
             android:text=" Gold: "
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:background="@drawable/border_gold"
@@ -145,7 +145,7 @@
             android:id="@+id/alchemyText"
             android:gravity="center"
             android:text="Alchemy"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:background="@drawable/border_the_forest"
@@ -154,8 +154,7 @@
             android:typeface="normal"
             android:textAllCaps="false"
             android:clickable="false"
-            android:layout_weight="1"
-            android:onClick="addPotion"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
     <ScrollView
@@ -172,8 +171,8 @@
             <TextView
                 android:id="@+id/healthPotion"
                 android:gravity="center"
-                android:text="Health Potion Level 1  \n+ 40 Health (1)"
-                android:textSize="25dp"
+                android:text="Health Potion"
+                android:textSize="25sp"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:background="@drawable/border_health"
@@ -182,8 +181,7 @@
                 android:typeface="normal"
                 android:textAllCaps="false"
                 android:clickable="false"
-                android:layout_weight="1"
-                android:onClick="alchemySell" />
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -195,23 +193,23 @@
                     android:id="@+id/healthPotionUpgrade"
                     android:gravity="center"
                     android:text="Upgrade for\n50 Gold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/border_craft_buy_sell"
+                    android:background="@drawable/border_upgrade"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:fontFamily="serif"
                     android:typeface="normal"
                     android:textAllCaps="false"
                     android:clickable="false"
                     android:layout_weight="1"
-                    android:onClick="alchemySell" />
+                    android:onClick="upgradeHealthPotion" />
 
                 <TextView
                     android:id="@+id/healthPotionCraft"
                     android:gravity="center"
                     android:text="Craft for\n 3 Herbs"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/border_the_forest"
@@ -221,7 +219,7 @@
                     android:textAllCaps="false"
                     android:clickable="false"
                     android:layout_weight="1"
-                    android:onClick="alchemySell" />
+                    android:onClick="buyHealthPotionForHerbs" />
             </LinearLayout>
 
             <LinearLayout
@@ -234,7 +232,7 @@
                     android:id="@+id/healthPotionSell"
                     android:gravity="center"
                     android:text="Sell for\n9 Gold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/border_gold"
@@ -244,13 +242,13 @@
                     android:textAllCaps="false"
                     android:clickable="false"
                     android:layout_weight="1"
-                    android:onClick="alchemySell" />
+                    android:onClick="sellHealthPotionForGold" />
 
                 <TextView
                     android:id="@+id/healthPotionBuy"
                     android:gravity="center"
                     android:text="Buy for\n12 Gold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/border_gold"
@@ -260,7 +258,7 @@
                     android:textAllCaps="false"
                     android:clickable="false"
                     android:layout_weight="1"
-                    android:onClick="alchemySell" />
+                    android:onClick="buyHealthPotionForGold" />
             </LinearLayout>
 
             <LinearLayout
@@ -273,7 +271,7 @@
                     android:id="@+id/damagePotion"
                     android:gravity="center"
                     android:text="Damage Potion Level 1\n+ 15 Damage for 3 turns (125)"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:layout_width="match_parent"
                     android:layout_height="75dp"
                     android:background="@drawable/border_offensive"
@@ -295,23 +293,22 @@
                     android:id="@+id/damagePotionUpgrade"
                     android:gravity="center"
                     android:text="Upgrade for\n50 Gold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="@drawable/border_craft_buy_sell"
+                    android:background="@drawable/border_upgrade"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:fontFamily="serif"
                     android:typeface="normal"
                     android:textAllCaps="false"
                     android:clickable="false"
-                    android:layout_weight="1"
-                    android:onClick="alchemySell" />
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/damagePotionCraft"
                     android:gravity="center"
                     android:text="Craft for\n 3 Herbs"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/border_the_forest"
@@ -333,7 +330,7 @@
                     android:id="@+id/damagePotionSell"
                     android:gravity="center"
                     android:text="Sell for\n9 Gold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/border_gold"
@@ -342,8 +339,7 @@
                     android:typeface="normal"
                     android:textAllCaps="false"
                     android:clickable="false"
-                    android:layout_weight="1"
-                    android:onClick="alchemySell" />
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/damagePotionBuy"

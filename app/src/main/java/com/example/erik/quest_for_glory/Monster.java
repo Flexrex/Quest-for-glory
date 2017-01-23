@@ -1,9 +1,6 @@
 package com.example.erik.quest_for_glory;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import java.io.Serializable;
 
 public class Monster extends AppCompatActivity implements Serializable
@@ -33,12 +30,6 @@ public class Monster extends AppCompatActivity implements Serializable
         this.herbYield = herbYield;
         this.oreYield = oreYield;
         this.soulDustYield = soulDustYield;
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quests);
     }
     public void setName(String name)
     {

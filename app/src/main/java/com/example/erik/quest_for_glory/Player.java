@@ -65,6 +65,7 @@ public class Player extends AppCompatActivity implements Serializable
     {
         this.health = health;
     }
+    public void increaseHealth(double amount) { health += amount; }
     public double getMaxHealth() { return maxHealth; }
     public double getHealth()
     {
@@ -80,11 +81,13 @@ public class Player extends AppCompatActivity implements Serializable
         return damage;
     }
     public void increaseGold(double amount) { gold += amount; }
+    public void decreaseGold(double amount) { gold -= amount; }
     public double getGold() { return gold; }
     public void increaseHerbs(double amount)
     {
         herbs += amount;
     }
+    public void decreaseHerbs(double amount) { herbs -= amount; }
     public double getHerbs() { return herbs; }
     public double getOres() { return ores; }
     public double getSoulDust() { return soulDust; }

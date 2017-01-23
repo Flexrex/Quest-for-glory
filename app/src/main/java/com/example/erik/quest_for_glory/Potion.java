@@ -6,85 +6,59 @@ import java.io.Serializable;
 public class Potion extends AppCompatActivity implements Serializable
 {
     private int level;
+    private int amount;
+    private double upgradeCost;
     private double goldCost;
+    private double goldWorth;
     private double herbCost;
-    private double oreCost;
-    private double soulDustCost;
-    private double buffHealth;
-    private double buffDamage;
-    private double buffCritChance;
-    private double buffDefense;
+    private double healthBuff;
+    private double damageBuff;
+    private double critChanceBuff;
+    private double defenseBuff;
 
-    public Potion(int level, double goldCost, double herbCost, double oreCost, double soulDustCost)
+    public Potion(int level, int amount, double upgradeCost, double goldCost, double goldWorth, double herbCost, double healthBuff, double damageBuff, double critChanceBuff, double defenseBuff)
     {
         this.level = level;
+        this.amount = amount;
+        this.upgradeCost = upgradeCost;
         this.goldCost = goldCost;
+        this.goldWorth = goldWorth;
         this.herbCost = herbCost;
-        this.oreCost = oreCost;
-        this.soulDustCost = soulDustCost;
+        this.healthBuff = healthBuff;
+        this.damageBuff = damageBuff;
+        this.critChanceBuff = critChanceBuff;
+        this.critChanceBuff = defenseBuff;
     }
-    public void healthLevelUp()
-    {
-        level += 1;
-        buffHealth *= 1.5;
-        herbCost *= 1.4;
-    }
-    public void damageLevelUp()
-    {
-        level += 1;
-        buffDamage *= 1.5;
-        herbCost *= 1.4;
-    }
-    public void critChanceLevelUp()
-    {
-        level += 1;
-        buffCritChance *= 1.2;
-        herbCost *= 6;
-    }
-    public void buffDefenseLevelUp()
-    {
-        level += 1;
-        buffDefense *= 1.5;
-        herbCost *= 1.4;
-    }
-    public void setBuffHealth(double buffHealth)
-    {
-        this.buffHealth = buffHealth;
-    }
-    public void setBuffDamage(double buffDamage)
-    {
-        this.buffDamage = buffDamage;
-    }
-    public void setBuffCritChance(double critChance)
-    {
-        this.buffCritChance = critChance;
-    }
-    public void setBuffDefense(double buffDefense)
-    {
-        this.buffDefense = buffDefense;
-    }
-    public int getLevel()
-    {
-        return level;
-    }
-    public double getHerbCost()
-    {
+    public int getLevel() { return level; }
+    public int getAmount() { return amount; }
+    public double getUpgradeCost() { return upgradeCost + amount * goldCost * 1.4; }
+    public double getGoldCost() { return goldCost; }
+    public double getGoldWorth() { return goldWorth; }
+    public double getHerbCost() {
         return herbCost;
     }
-    public double getBuffHealth()
-    {
-        return buffHealth;
+    public double getHealthBuff() {
+        return healthBuff;
     }
-    public double getBuffDamage()
-    {
-        return buffDamage;
+    public double getDamageBuff() {
+        return damageBuff;
     }
-    public double getBuffCritChance()
-    {
-        return buffCritChance;
+    public double getCritChanceBuff() {
+        return critChanceBuff;
     }
-    public double getBuffDefense()
+    public double getDefenseBuff() { return defenseBuff; }
+    public void increaseAmount() { amount += 1; }
+    public void decreaseAmount() { amount -= 1; }
+    public void upgrade()
     {
-        return buffDefense;
+        level += 1;
+        upgradeCost *= 1.4;
+        goldCost *= 1.4;
+        goldWorth *= 1.4;
+        herbCost *= 1.4;
+        healthBuff *= 1.5;
+        damageBuff *= 1.5;
+        critChanceBuff *= 1.2;
+        defenseBuff *= 1.5;
     }
 }

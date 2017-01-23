@@ -12,10 +12,13 @@ public class TheForest extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
-    TextView playerHealthBar;
-    TextView sprigganHealthBar;
+    Potion healthPotion;
+    TextView playerHealth;
+    TextView sprigganHealth;
+    TextView HP;
     String playerHealthText;
     String sprigganHealthText;
+    String HPText;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -24,26 +27,47 @@ public class TheForest extends AppCompatActivity
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
+        healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
-        playerHealthBar = (TextView) findViewById(R.id.playerHealthBar);
-        sprigganHealthBar = (TextView) findViewById(R.id.sprigganHealthBar);
+        playerHealth = (TextView) findViewById(R.id.playerHealthBar);
+        sprigganHealth = (TextView) findViewById(R.id.sprigganHealthBar);
+        HP = (TextView) findViewById(R.id.HP);
 
         playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
         sprigganHealthText = "Health: " + (int) spriggan.getHealth() + " / " + (int) spriggan.getMaxHealth();
+        HPText = "HP (" + healthPotion.getAmount() + ")";
 
-        playerHealthBar.setText(playerHealthText);
-        sprigganHealthBar.setText(sprigganHealthText);
+        playerHealth.setText(playerHealthText);
+        sprigganHealth.setText(sprigganHealthText);
+        HP.setText(HPText);
     }
     public void strike(View view)
     {
         spriggan.takeDamage(player.strike());
         sprigganHealthText = "Health: " + (int) spriggan.getHealth() + " / " + (int) spriggan.getMaxHealth();
-        sprigganHealthBar.setText(sprigganHealthText);
+        sprigganHealth.setText(sprigganHealthText);
         checkSprigganAlive();
         player.takeDamage(spriggan.getDamage());
         playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
-        playerHealthBar.setText(playerHealthText);
+        playerHealth.setText(playerHealthText);
         checkPlayerAlive();
+    }
+    public void useHealthPotion(View view)
+    {
+        if(healthPotion.getAmount() > 0 && player.getHealth() != player.getMaxHealth())
+        {
+            healthPotion.decreaseAmount();
+            player.increaseHealth(healthPotion.getHealthBuff());
+            if(player.getHealth() > player.getMaxHealth())
+            {
+                player.setHealth(player.getMaxHealth());
+            }
+            playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
+            HPText = "HP (" + healthPotion.getAmount() + ")";
+
+            playerHealth.setText(playerHealthText);
+            HP.setText(HPText);
+        }
     }
     public void checkPlayerAlive()
     {
@@ -51,11 +75,11 @@ public class TheForest extends AppCompatActivity
         {
             intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
-            player.setHealth(player.getMaxHealth());
             spriggan.setHealth(spriggan.getMaxHealth());
             spriggan.levelDown();
             bundle.putSerializable("player", player);
             bundle.putSerializable("spriggan", spriggan);
+            bundle.putSerializable("healthPotion", healthPotion);
             intent.putExtras(bundle);
             startActivity(intent);
         }
@@ -67,7 +91,6 @@ public class TheForest extends AppCompatActivity
             intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
             spriggan.setHealth(spriggan.getMaxHealth());
-            player.setHealth(player.getMaxHealth());
             player.increaseXP(spriggan.getXPYield());
             player.increaseHerbs(spriggan.getHerbYield());
             player.increaseGold(spriggan.getGoldYield());
@@ -86,6 +109,7 @@ public class TheForest extends AppCompatActivity
             }
             bundle.putSerializable("player", player);
             bundle.putSerializable("spriggan", spriggan);
+            bundle.putSerializable("healthPotion", healthPotion);
             intent.putExtras(bundle);
             startActivity(intent);
         }
