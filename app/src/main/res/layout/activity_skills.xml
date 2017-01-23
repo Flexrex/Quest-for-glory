@@ -221,6 +221,7 @@
             android:clickable="false"
             android:onClick="kingdom"
             android:layout_weight="1" />
+
         <TextView
             android:id="@+id/questsText"
             android:gravity="center"
