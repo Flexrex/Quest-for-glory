@@ -11,14 +11,17 @@ public class chCreate extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
+    Potion healthPotion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_create);
-        player = new Player("Erko", 1, 0, 200, 100, 8, 0, 0, 0);
-        spriggan = new Monster("Spriggan", 1, 50, 80, 6, 2, 2, 2);
+        player = new Player("Erko", 1, 0, 200, 100, 8, 0, 0, 0, 0);
+        spriggan = new Monster("Spriggan", 1, 50, 70, 3, 6, 2, 2, 2);
+        healthPotion = new Potion("")
+
     }
     public void Done(View view)
     {

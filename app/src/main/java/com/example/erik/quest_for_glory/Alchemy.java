@@ -12,31 +12,41 @@ public class Alchemy extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
-    TextView levelText;
-    TextView XPText;
+    TextView level;
+    TextView XP;
     TextView herbs;
     TextView gold;
-    String playerLevelText;
-    String playerXPText;
+    TextView healthPotion;
+    String levelText;
+    String XPText;
+    String herbsText;
     String goldText;
+    String healthPotionText;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alchemy);
-        levelText = (TextView) findViewById(R.id.levelText);
-        XPText = (TextView) findViewById(R.id.XPText);
-        herbs = (TextView) findViewById(R.id.herbs);
-        gold = (TextView) findViewById(R.id.gold);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
 
-        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        level = (TextView) findViewById(R.id.levelText);
+        XP = (TextView) findViewById(R.id.XPText);
+        herbs = (TextView) findViewById(R.id.herbs);
+        gold = (TextView) findViewById(R.id.gold);
+        healthPotion = (TextView) findViewById(R.id.healthPotion);
 
-        levelText.setText(playerLevelText);
-        XPText.setText(playerXPText);
+        levelText = getString(R.string.level_text ) + " " + player.getLevel();
+        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        herbsText = " Herbs: " + (int) player.getHerbs();
+        goldText = " Gold: " + (int) player.getGold();
+        healthPotionText = "Health Potion Level" + healthPotion.getLevel()  \n+ 40 Health (1)"
+
+        level.setText(levelText);
+        XP.setText(XPText);
+        herbs.setText(herbsText);
+        gold.setText(goldText);
     }
     public void greed(View view)
     {

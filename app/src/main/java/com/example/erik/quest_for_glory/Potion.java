@@ -6,28 +6,27 @@ import java.io.Serializable;
 public class Potion extends AppCompatActivity implements Serializable
 {
     private int level;
+    private double goldCost;
     private double herbCost;
+    private double oreCost;
+    private double soulDustCost;
     private double buffHealth;
-    private double buffHealthRegen;
     private double buffDamage;
     private double buffCritChance;
     private double buffDefense;
 
-    public Potion(int level, double herbCost)
+    public Potion(int level, double goldCost, double herbCost, double oreCost, double soulDustCost)
     {
         this.level = level;
+        this.goldCost = goldCost;
         this.herbCost = herbCost;
+        this.oreCost = oreCost;
+        this.soulDustCost = soulDustCost;
     }
     public void healthLevelUp()
     {
         level += 1;
         buffHealth *= 1.5;
-        herbCost *= 1.4;
-    }
-    public void healthRegenLevelUp()
-    {
-        level += 1;
-        buffHealthRegen *= 1.5;
         herbCost *= 1.4;
     }
     public void damageLevelUp()
@@ -52,10 +51,6 @@ public class Potion extends AppCompatActivity implements Serializable
     {
         this.buffHealth = buffHealth;
     }
-    public void setBuffHealthRegen(double buffHealthRegen)
-    {
-        this.buffHealthRegen = buffHealthRegen;
-    }
     public void setBuffDamage(double buffDamage)
     {
         this.buffDamage = buffDamage;
@@ -79,10 +74,6 @@ public class Potion extends AppCompatActivity implements Serializable
     public double getBuffHealth()
     {
         return buffHealth;
-    }
-    public double getBuffHealthRegen()
-    {
-        return buffHealthRegen;
     }
     public double getBuffDamage()
     {

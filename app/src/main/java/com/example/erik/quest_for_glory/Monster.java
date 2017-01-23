@@ -15,11 +15,12 @@ public class Monster extends AppCompatActivity implements Serializable
     private double maxHealth;
     private double health;
     private double damage;
+    private double goldYield;
     private double herbYield;
     private double oreYield;
     private double soulDustYield;
 
-    Monster(String name, int maxLevel, double XPYield, int maxHealth, double damage, double herbYield, double oreYield, double soulDustYield)
+    Monster(String name, int maxLevel, double XPYield, int maxHealth, double damage, double goldYield, double herbYield, double oreYield, double soulDustYield)
     {
         this.name = name;
         this.maxLevel = maxLevel;
@@ -28,6 +29,7 @@ public class Monster extends AppCompatActivity implements Serializable
         this.maxHealth = maxHealth;
         health = maxHealth;
         this.damage = damage;
+        this.goldYield = goldYield;
         this.herbYield = herbYield;
         this.oreYield = oreYield;
         this.soulDustYield = soulDustYield;
@@ -56,6 +58,7 @@ public class Monster extends AppCompatActivity implements Serializable
     {
         return XPYield;
     }
+    public double getGoldYield() { return goldYield; }
     public double getHerbYield() { return herbYield; }
     public void levelUp()
     {
@@ -64,6 +67,7 @@ public class Monster extends AppCompatActivity implements Serializable
         health = maxHealth;
         damage *= 1.4;
         XPYield *= 1.5;
+        goldYield *= 1.5;
         herbYield *= 1.5;
     }
     public void levelDown()
@@ -73,6 +77,7 @@ public class Monster extends AppCompatActivity implements Serializable
         health = maxHealth;
         damage /= 1.4;
         XPYield /= 1.5;
+        goldYield /= 1.5;
         herbYield /= 1.5;
     }
     public void setHealth(double health)

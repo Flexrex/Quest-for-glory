@@ -132,6 +132,16 @@
                     android:layout_alignBottom="@+id/strike_image" />
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65sp"
+                android:id="@+id/charge_info"
+                android:layout_alignTop="@+id/charge_image"
+                android:layout_marginTop="33dp"
+                android:layout_marginStart="30dp"
+                android:textSize="16sp"
+                android:text="@string/charge_text" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,15 +155,6 @@
                     android:layout_marginStart="30dp"
                     android:id="@+id/leap_image" />
 
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:text="@string/charge_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -178,7 +179,9 @@
                     android:layout_marginTop="33dp"
                     android:layout_marginStart="30dp"
                     android:textSize="16sp"
-                    android:text="@string/charge_text" />
+                    android:text="@string/charge_text"
+                    android:layout_weight="1" />
+
             </LinearLayout>
 
             <LinearLayout

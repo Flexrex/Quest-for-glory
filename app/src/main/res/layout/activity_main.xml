@@ -8,15 +8,6 @@
     android:background="@android:color/holo_green_dark">
 
     <Button
-        android:id="@+id/button"
-        android:text="Start"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="Start" />
-
-    <Button
         android:id="@+id/button2"
         android:text="Options"
         android:layout_width="150dp"
@@ -49,4 +40,13 @@
         android:textStyle="normal|bold"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:text="Start"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:onClick="Start"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
