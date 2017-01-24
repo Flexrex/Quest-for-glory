@@ -17,17 +17,19 @@ public class Gear extends AppCompatActivity
     TextView XPText;
     String playerLevelText;
     String playerXPText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gear);
-        levelText = (TextView) findViewById(R.id.levelText);
-        XPText = (TextView) findViewById(R.id.XPText);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
+
+        levelText = (TextView) findViewById(R.id.level);
+        XPText = (TextView) findViewById(R.id.XP);
 
         playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();

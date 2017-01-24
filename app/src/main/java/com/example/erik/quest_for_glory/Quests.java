@@ -18,11 +18,15 @@ public class Quests extends AppCompatActivity
     TextView forest;
     TextView mountain;
     TextView ruin;
+    TextView forestReward;
+    TextView mountainReward;
+    TextView ruinReward;
     String playerLevelText;
     String playerXPText;
     String forestText;
     String mountainText;
     String ruinText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -33,11 +37,11 @@ public class Quests extends AppCompatActivity
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
-        level= (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
+        level= (TextView) findViewById(R.id.level);
+        XP = (TextView) findViewById(R.id.XP);
         forest = (TextView) findViewById(R.id.forest);
         mountain = (TextView) findViewById(R.id.mountain);
-        ruin = (TextView) findViewById(R.id.ruin) ;
+        ruin = (TextView) findViewById(R.id.ruin);
 
         playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
         playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();

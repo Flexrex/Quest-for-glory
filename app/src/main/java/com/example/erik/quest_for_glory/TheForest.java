@@ -29,8 +29,8 @@ public class TheForest extends AppCompatActivity
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
-        playerHealth = (TextView) findViewById(R.id.playerHealthBar);
-        sprigganHealth = (TextView) findViewById(R.id.sprigganHealthBar);
+        playerHealth = (TextView) findViewById(R.id.playerHealth);
+        sprigganHealth = (TextView) findViewById(R.id.sprigganHealth);
         HP = (TextView) findViewById(R.id.HP);
 
         playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
@@ -64,19 +64,21 @@ public class TheForest extends AppCompatActivity
             }
             playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
             HPText = "HP (" + healthPotion.getAmount() + ")";
-
             playerHealth.setText(playerHealthText);
             HP.setText(HPText);
         }
     }
     public void checkPlayerAlive()
     {
-        if(player.getHealth() <= 1)
+        if(player.getHealth() < 0.5)
         {
             intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
             spriggan.setHealth(spriggan.getMaxHealth());
-            spriggan.levelDown();
+            if(spriggan.getLevel() > 1)
+            {
+                spriggan.levelDown();
+            }
             bundle.putSerializable("player", player);
             bundle.putSerializable("spriggan", spriggan);
             bundle.putSerializable("healthPotion", healthPotion);

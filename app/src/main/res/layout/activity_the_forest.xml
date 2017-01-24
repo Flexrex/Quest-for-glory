@@ -29,49 +29,49 @@
         android:layout_alignStart="@+id/spriggan" />
 
     <TextView
+        android:id="@+id/strike"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:background="@drawable/border_offensive"
         android:text="Strike"
         android:gravity="center"
-        android:id="@+id/strike"
-        android:layout_below="@+id/playerHealthBar"
+        android:layout_below="@+id/playerHealth"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="40dp"
         android:clickable="false"
         android:onClick="strike"/>
 
     <TextView
+        android:id="@+id/HP"
         android:layout_width="52sp"
         android:layout_height="wrap_content"
-        android:id="@+id/HP"
-        android:text="HP(1000)"
+        android:text="HP"
         android:textSize="12sp"
         android:gravity="center"
         android:background="@drawable/border_health"
-        android:layout_above="@+id/playerHealthBar"
+        android:layout_above="@+id/playerHealth"
         android:layout_alignParentEnd="true"
         android:onClick="useHealthPotion"/>
 
     <TextView
+        android:id="@+id/sprigganHealth"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="@drawable/border_health"
         android:text="Health: "
         android:gravity="center"
-        android:id="@+id/sprigganHealthBar"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/spriggan"
         android:layout_centerHorizontal="true" />
 
     <TextView
+        android:id="@+id/playerHealth"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="@drawable/border_health"
         android:text="Health: "
         android:gravity="center"
-        android:id="@+id/playerHealthBar"
         android:layout_marginBottom="10dp"
         android:layout_above="@+id/player"
-        android:layout_alignStart="@+id/sprigganHealthBar" />
+        android:layout_alignStart="@+id/sprigganHealth" />
 </RelativeLayout>

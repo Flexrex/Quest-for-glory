@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/levelText"
+            android:id="@+id/level"
             android:text="@string/level_text"
             android:gravity="center"
             android:textSize="23dp"
@@ -27,7 +27,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/XPText"
+            android:id="@+id/XP"
             android:text="@string/XP_text"
             android:gravity="center"
             android:textSize="23dp"

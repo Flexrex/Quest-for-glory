@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/levelText"
+            android:id="@+id/level"
             android:text="@string/level_text"
             android:gravity="center"
             android:textSize="23sp"
@@ -26,7 +26,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/XPText"
+            android:id="@+id/XP"
             android:text="@string/XP_text"
             android:gravity="center"
             android:textSize="23sp"
@@ -103,8 +103,8 @@
             android:id="@+id/quest_1"
             android:gravity="center"
             android:text="@string/quest_1_text"
-            android:textSize="21dp"
-            android:layout_width="100dp"
+            android:textSize="21sp"
+            android:layout_width="0dp"
             android:layout_height="45dp"
             android:background="@drawable/border_quest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -128,12 +128,13 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/border_the_forest"
             android:onClick="decreaseTheForestLevel"
-            android:layout_alignStart="@+id/spriggan" />
+            android:layout_alignStart="@+id/spriggan"
+            android:contentDescription="levelBack" />
 
         <TextView
             android:id="@+id/forest"
             android:gravity="center"
-            android:text="@string/forest_text"
+            android:text="The Forest"
             android:textSize="28sp"
             android:layout_width="212dp"
             android:layout_height="74dp"
@@ -196,7 +197,7 @@
         <TextView
             android:id="@+id/mountain"
             android:gravity="center"
-            android:text="@string/mountain_text"
+            android:text="The Mountain"
             android:textSize="28sp"
             android:layout_width="212dp"
             android:layout_height="74dp"
@@ -256,7 +257,7 @@
         <TextView
             android:id="@+id/ruin"
             android:gravity="center"
-            android:text="@string/ruin_text"
+            android:text="The Ruin"
             android:textSize="28sp"
             android:layout_width="212dp"
             android:layout_height="match_parent"
@@ -265,7 +266,8 @@
             android:fontFamily="serif"
             android:typeface="normal"
             android:textAllCaps="false"
-            android:clickable="false" />
+            android:clickable="false"
+            android:layout_weight="1" />
 
         <ImageView
             android:layout_width="74dp"

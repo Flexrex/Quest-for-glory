@@ -31,26 +31,28 @@ public class Monster extends AppCompatActivity implements Serializable
         this.oreYield = oreYield;
         this.soulDustYield = soulDustYield;
     }
+    public String getName() { return name; }
+    public int getLevel() { return level; }
+    public int getMaxLevel() { return maxLevel; }
+    public double getMaxHealth() { return maxHealth; }
+    public double getHealth() { return health; }
+    public double getXPYield() { return XPYield; }
+    public double getGoldYield() { return goldYield; }
+    public double getHerbYield() { return herbYield; }
+    public double getDamage() { return damage; }
     public void setName(String name)
     {
         this.name = name;
     }
-    public String getName()
-    {
-        return name;
-    }
-    public int getMaxLevel() { return maxLevel; }
     public void increaseMaxLevel() { maxLevel += 1; }
-    public int getLevel()
+    public void setHealth(double health)
     {
-        return level;
+        this.health = health;
     }
-    public double getXPYield()
+    public void takeDamage(double damage)
     {
-        return XPYield;
+        health -= damage;
     }
-    public double getGoldYield() { return goldYield; }
-    public double getHerbYield() { return herbYield; }
     public void levelUp()
     {
         level += 1;
@@ -70,22 +72,5 @@ public class Monster extends AppCompatActivity implements Serializable
         XPYield /= 1.5;
         goldYield /= 1.5;
         herbYield /= 1.5;
-    }
-    public void setHealth(double health)
-    {
-        this.health = health;
-    }
-    public double getMaxHealth() { return maxHealth; }
-    public double getHealth()
-    {
-        return health;
-    }
-    public void takeDamage(double damage)
-    {
-        health -= damage;
-    }
-    public double getDamage()
-    {
-        return damage;
     }
 }

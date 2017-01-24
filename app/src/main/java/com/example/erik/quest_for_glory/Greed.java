@@ -22,12 +22,13 @@ public class Greed extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_greed);
-        level = (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
+
+        level = (TextView) findViewById(R.id.level);
+        XP = (TextView) findViewById(R.id.XP);
 
         LevelText = getString(R.string.level_text ) + " " + player.getLevel();
         XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();

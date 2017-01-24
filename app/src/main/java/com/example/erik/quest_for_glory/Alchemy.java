@@ -31,6 +31,7 @@ public class Alchemy extends AppCompatActivity
     String healthPotionCraftText;
     String healthPotionSellText;
     String healthPotionBuyText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -41,8 +42,8 @@ public class Alchemy extends AppCompatActivity
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
-        level = (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
+        level = (TextView) findViewById(R.id.level);
+        XP = (TextView) findViewById(R.id.XP);
         herbs = (TextView) findViewById(R.id.herbs);
         gold = (TextView) findViewById(R.id.gold);
         theHealthPotion = (TextView) findViewById(R.id.healthPotion);

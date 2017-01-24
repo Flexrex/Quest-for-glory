@@ -31,22 +31,30 @@ public class Player extends AppCompatActivity implements Serializable
         this.ores = ores;
         this.soulDust = soulDust;
     }
-    public void setName(String name)
-    {
-        this.name = name;
-    }
     public String getName()
     {
         return name;
     }
-    public int getLevel()
-    {
-        return level;
-    }
-    public void increaseXP(double amount)
-    {
-        XP += amount;
-    }
+    public int getLevel() { return level; }
+    public int getXP() { return XP; }
+    public int getXPToNextLevel() { return XPToNextLevel; }
+    public double getMaxHealth() { return maxHealth; }
+    public double getHealth() { return health; }
+    public double getDamage() { return damage; }
+    public double getGold() { return gold; }
+    public double getHerbs() { return herbs; }
+    public double getOres() { return ores; }
+    public double getSoulDust() { return soulDust; }
+    public double strike() { return damage; }
+    public void setName(String name) { this.name = name; }
+    public void setHealth(double amount) { this.health = amount; }
+    public void takeDamage(double amount) { health -= amount; }
+    public void increaseHealth(double amount) { health += amount; }
+    public void increaseXP(double amount) { XP += amount; }
+    public void increaseGold(double amount) { gold += amount; }
+    public void increaseHerbs(double amount) { herbs += amount; }
+    public void decreaseGold(double amount) { gold -= amount; }
+    public void decreaseHerbs(double amount) { herbs -= amount; }
     public void levelUp()
     {
         level += 1;
@@ -56,39 +64,4 @@ public class Player extends AppCompatActivity implements Serializable
         health = maxHealth;
         damage *= 1.2;
     }
-    public int getXP()
-    {
-        return XP;
-    }
-    public int getXPToNextLevel() { return XPToNextLevel; }
-    public void setHealth(double health)
-    {
-        this.health = health;
-    }
-    public void increaseHealth(double amount) { health += amount; }
-    public double getMaxHealth() { return maxHealth; }
-    public double getHealth()
-    {
-        return health;
-    }
-    public void takeDamage(double amount)
-    {
-        health -= amount;
-    }
-    public double strike() { return damage; }
-    public double getDamage()
-    {
-        return damage;
-    }
-    public void increaseGold(double amount) { gold += amount; }
-    public void decreaseGold(double amount) { gold -= amount; }
-    public double getGold() { return gold; }
-    public void increaseHerbs(double amount)
-    {
-        herbs += amount;
-    }
-    public void decreaseHerbs(double amount) { herbs -= amount; }
-    public double getHerbs() { return herbs; }
-    public double getOres() { return ores; }
-    public double getSoulDust() { return soulDust; }
 }

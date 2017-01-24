@@ -35,8 +35,8 @@ public class Kingdom extends AppCompatActivity
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
         healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
-        level = (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
+        level = (TextView) findViewById(R.id.level);
+        XP = (TextView) findViewById(R.id.XP);
         gold =(TextView) findViewById(R.id.gold);
         herbs = (TextView) findViewById(R.id.herbs);
         ores = (TextView) findViewById(R.id.ores);

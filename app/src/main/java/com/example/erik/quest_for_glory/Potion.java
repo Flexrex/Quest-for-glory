@@ -34,18 +34,10 @@ public class Potion extends AppCompatActivity implements Serializable
     public double getUpgradeCost() { return upgradeCost + amount * goldCost * 1.4; }
     public double getGoldCost() { return goldCost; }
     public double getGoldWorth() { return goldWorth; }
-    public double getHerbCost() {
-        return herbCost;
-    }
-    public double getHealthBuff() {
-        return healthBuff;
-    }
-    public double getDamageBuff() {
-        return damageBuff;
-    }
-    public double getCritChanceBuff() {
-        return critChanceBuff;
-    }
+    public double getHerbCost() { return herbCost; }
+    public double getHealthBuff() { return healthBuff; }
+    public double getDamageBuff() { return damageBuff; }
+    public double getCritChanceBuff() { return critChanceBuff; }
     public double getDefenseBuff() { return defenseBuff; }
     public void increaseAmount() { amount += 1; }
     public void decreaseAmount() { amount -= 1; }
