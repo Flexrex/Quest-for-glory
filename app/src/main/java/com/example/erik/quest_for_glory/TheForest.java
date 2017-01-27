@@ -19,6 +19,7 @@ public class TheForest extends AppCompatActivity
     String playerHealthText;
     String sprigganHealthText;
     String HPText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

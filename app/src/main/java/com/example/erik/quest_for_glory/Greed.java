@@ -17,6 +17,7 @@ public class Greed extends AppCompatActivity
     TextView XP;
     String LevelText;
     String XPText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

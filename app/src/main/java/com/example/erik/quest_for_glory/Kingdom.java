@@ -25,6 +25,7 @@ public class Kingdom extends AppCompatActivity
     String herbsText;
     String oresText;
     String soulDustText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
