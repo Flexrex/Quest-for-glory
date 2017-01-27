@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -13,9 +12,9 @@
 
         <TextView
             android:id="@+id/level"
-            android:text="@string/level_text"
+            android:text="@string/level"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -27,9 +26,9 @@
 
         <TextView
             android:id="@+id/XP"
-            android:text="@string/XP_text"
+            android:text="@string/XP"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -48,8 +47,8 @@
         <TextView
             android:id="@+id/greedText"
             android:gravity="center"
-            android:text="@string/greed_text"
-            android:textSize="23dp"
+            android:text="@string/greed"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus_highlight"
@@ -63,8 +62,8 @@
         <TextView
             android:id="@+id/inventoryText"
             android:gravity="center"
-            android:text="@string/inventory_text"
-            android:textSize="23dp"
+            android:text="@string/inventory"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -79,8 +78,8 @@
         <TextView
             android:id="@+id/skillsText"
             android:gravity="center"
-            android:text="@string/skills_text"
-            android:textSize="23dp"
+            android:text="@string/skills"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -101,9 +100,9 @@
         <TextView
             android:id="@+id/theForestText"
             android:gravity="center"
-            android:text="Greed"
-            android:textSize="40dp"
-            android:layout_width="100dp"
+            android:text="@string/greed"
+            android:textSize="40sp"
+            android:layout_width="0dp"
             android:layout_height="372dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -122,8 +121,8 @@
         <TextView
             android:id="@+id/gearText"
             android:gravity="center"
-            android:text="@string/gear_text"
-            android:textSize="23dp"
+            android:text="@string/gear"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -138,8 +137,8 @@
         <TextView
             android:id="@+id/kingdomText"
             android:gravity="center"
-            android:text="@string/kingdom_text"
-            android:textSize="23dp"
+            android:text="@string/kingdom"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -154,8 +153,8 @@
         <TextView
             android:id="@+id/questsText"
             android:gravity="center"
-            android:text="@string/quests_text"
-            android:textSize="23dp"
+            android:text="@string/quests"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"

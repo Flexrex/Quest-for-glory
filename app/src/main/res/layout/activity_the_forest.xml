@@ -18,7 +18,9 @@
         android:id="@+id/spriggan"
         android:layout_marginTop="10dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/spriggan"/>
+
     <ImageView
         android:layout_width="110dp"
         android:layout_height="150dp"
@@ -26,14 +28,15 @@
         android:id="@+id/player"
         android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/spriggan" />
+        android:layout_alignStart="@+id/spriggan"
+        android:contentDescription="@string/player"/>
 
     <TextView
         android:id="@+id/strike"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:background="@drawable/border_offensive"
-        android:text="Strike"
+        android:text="@string/strike"
         android:gravity="center"
         android:layout_below="@+id/playerHealth"
         android:layout_alignParentEnd="true"
@@ -45,7 +48,7 @@
         android:id="@+id/HP"
         android:layout_width="52sp"
         android:layout_height="wrap_content"
-        android:text="HP"
+        android:text="@string/health_potion"
         android:textSize="12sp"
         android:gravity="center"
         android:background="@drawable/border_health"
@@ -58,7 +61,7 @@
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="@drawable/border_health"
-        android:text="Health: "
+        android:text="@string/enemy_health"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/spriggan"
@@ -69,7 +72,7 @@
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="@drawable/border_health"
-        android:text="Health: "
+        android:text="@string/player_health"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_above="@+id/player"

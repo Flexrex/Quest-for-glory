@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -13,7 +12,7 @@
 
         <TextView
             android:id="@+id/level"
-            android:text="@string/level_text"
+            android:text="@string/level"
             android:gravity="center"
             android:textSize="23sp"
             android:layout_width="80dp"
@@ -27,7 +26,7 @@
 
         <TextView
             android:id="@+id/XP"
-            android:text="@string/XP_text"
+            android:text="@string/XP"
             android:gravity="center"
             android:textSize="23sp"
             android:layout_width="200dp"
@@ -48,7 +47,7 @@
         <TextView
             android:id="@+id/greedText"
             android:gravity="center"
-            android:text="@string/greed_text"
+            android:text="@string/greed"
             android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -64,7 +63,7 @@
         <TextView
             android:id="@+id/inventoryText"
             android:gravity="center"
-            android:text="@string/inventory_text"
+            android:text="@string/inventory"
             android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -80,7 +79,7 @@
         <TextView
             android:id="@+id/skillsText"
             android:gravity="center"
-            android:text="@string/skills_text"
+            android:text="@string/skills"
             android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -101,9 +100,9 @@
 
         <TextView
             android:id="@+id/herbs"
-            android:text=" Herbs: "
+            android:text="@string/herbs"
             android:textSize="23sp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="33dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -121,9 +120,9 @@
 
         <TextView
             android:id="@+id/ores"
-            android:text=" Ores: "
+            android:text="@string/ores"
             android:textSize="23sp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="33dp"
             android:background="@drawable/border_the_mountain"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -141,9 +140,9 @@
 
         <TextView
             android:id="@+id/soulDust"
-            android:text=" Soul Dust: "
+            android:text="@string/soulDust"
             android:textSize="23sp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="33dp"
             android:background="@drawable/border_the_ruin"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -161,9 +160,9 @@
 
         <TextView
             android:id="@+id/gold"
-            android:text=" Gold: "
+            android:text="@string/gold"
             android:textSize="23sp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="33dp"
             android:background="@drawable/border_gold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -182,9 +181,9 @@
         <TextView
             android:id="@+id/alchemy"
             android:gravity="center"
-            android:text="Alchemy"
+            android:text="@string/alchemy"
             android:textSize="40sp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="80dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -204,9 +203,9 @@
         <TextView
             android:id="@+id/blacksmithing"
             android:gravity="center"
-            android:text="Blacksmithing"
+            android:text="@string/blacksmithing"
             android:textSize="40sp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="80dp"
             android:background="@drawable/border_the_mountain"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -225,8 +224,8 @@
         <TextView
             android:id="@+id/enchanting"
             android:gravity="center"
-            android:text="Enchanting"
-            android:textSize="40dp"
+            android:text="@string/enchanting"
+            android:textSize="40sp"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:background="@drawable/border_the_ruin"
@@ -245,8 +244,8 @@
         <TextView
             android:id="@+id/gearText"
             android:gravity="center"
-            android:text="@string/gear_text"
-            android:textSize="23dp"
+            android:text="@string/gear"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -261,8 +260,8 @@
         <TextView
             android:id="@+id/kingdomText"
             android:gravity="center"
-            android:text="@string/kingdom_text"
-            android:textSize="23dp"
+            android:text="@string/kingdom"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus_highlight"
@@ -276,8 +275,8 @@
         <TextView
             android:id="@+id/questsText"
             android:gravity="center"
-            android:text="@string/quests_text"
-            android:textSize="23dp"
+            android:text="@string/quests"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"

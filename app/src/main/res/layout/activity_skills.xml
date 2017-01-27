@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -14,9 +12,9 @@
 
         <TextView
             android:id="@+id/level"
-            android:text="@string/level_text"
+            android:text="@string/level"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -28,9 +26,9 @@
 
         <TextView
             android:id="@+id/XP"
-            android:text="@string/XP_text"
+            android:text="@string/XP"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -49,8 +47,8 @@
         <TextView
             android:id="@+id/greedText"
             android:gravity="center"
-            android:text="@string/greed_text"
-            android:textSize="23dp"
+            android:text="@string/greed"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -65,8 +63,8 @@
         <TextView
             android:id="@+id/inventoryText"
             android:gravity="center"
-            android:text="@string/inventory_text"
-            android:textSize="23dp"
+            android:text="@string/inventory"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -81,8 +79,8 @@
         <TextView
             android:id="@+id/skillsText"
             android:gravity="center"
-            android:text="@string/skills_text"
-            android:textSize="23dp"
+            android:text="@string/skills"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus_highlight"
@@ -101,137 +99,37 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:id="@+id/strike_image"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
-
                 <TextView
-                    android:layout_width="200sp"
+                    android:layout_width="fill_parent"
                     android:layout_height="65sp"
-                    android:text="@string/strike_text"
+                    android:text="@string/strike_info"
                     android:id="@+id/strike_info"
                     android:layout_marginTop="34dp"
                     android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:layout_alignTop="@+id/strike_image"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignBottom="@+id/strike_image" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="65sp"
-                android:id="@+id/charge_info"
-                android:layout_alignTop="@+id/charge_image"
-                android:layout_marginTop="33dp"
-                android:layout_marginStart="30dp"
-                android:textSize="16sp"
-                android:text="@string/charge_text" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:id="@+id/leap_image" />
-
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <ImageView
-
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:id="@+id/leap_image" />
 
                 <TextView
                     android:layout_width="200sp"
                     android:layout_height="65sp"
                     android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
                     android:layout_marginTop="33dp"
                     android:layout_marginStart="30dp"
                     android:textSize="16sp"
-                    android:text="@string/charge_text"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:id="@+id/leap_image" />
-
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:text="@string/charge_text" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="65sp"
-                    android:layout_height="65sp"
-                    app:srcCompat="@android:color/black"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:id="@+id/leap_image" />
-
-                <TextView
-                    android:layout_width="200sp"
-                    android:layout_height="65sp"
-                    android:id="@+id/charge_info"
-                    android:layout_alignTop="@+id/charge_image"
-                    android:layout_marginTop="33dp"
-                    android:layout_marginStart="30dp"
-                    android:textSize="16sp"
-                    android:text="@string/charge_text" />
+                    android:text="@string/charge_info" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -244,8 +142,8 @@
         <TextView
             android:id="@+id/gearText"
             android:gravity="center"
-            android:text="@string/gear_text"
-            android:textSize="23dp"
+            android:text="@string/gear"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -260,8 +158,8 @@
         <TextView
             android:id="@+id/kingdomText"
             android:gravity="center"
-            android:text="@string/kingdom_text"
-            android:textSize="23dp"
+            android:text="@string/kingdom"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -276,8 +174,8 @@
         <TextView
             android:id="@+id/questsText"
             android:gravity="center"
-            android:text="@string/quests_text"
-            android:textSize="23dp"
+            android:text="@string/quests"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
