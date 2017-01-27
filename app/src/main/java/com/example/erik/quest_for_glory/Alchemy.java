@@ -52,11 +52,11 @@ public class Alchemy extends AppCompatActivity
         healthPotionSell = (TextView) findViewById(R.id.healthPotionSell);
         healthPotionBuy = (TextView) findViewById(R.id.healthPotionBuy);
 
-        levelText = getString(R.string.level_text ) + " " + player.getLevel();
-        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        levelText = "Level " + player.getLevel();
+        XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
         herbsText = " Herbs: " + (int) player.getHerbs();
         goldText = " Gold: " + (int) player.getGold();
-        healthPotionText = "Health Potion Level " + healthPotion.getLevel() +  "\n+ " + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
+        healthPotionText = "Health Potion Level " + healthPotion.getLevel() + "\n" + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
         healthPotionUpgradeText = "Upgrade for\n" + (int) healthPotion.getUpgradeCost() + " Gold";
         healthPotionCraftText = "Craft for\n" + (int) healthPotion.getHerbCost() + " Herbs";
         healthPotionSellText = "Sell for\n" + (int) healthPotion.getGoldWorth() + " Gold";

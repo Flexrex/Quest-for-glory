@@ -43,8 +43,8 @@ public class Kingdom extends AppCompatActivity
         ores = (TextView) findViewById(R.id.ores);
         soulDust = (TextView) findViewById(R.id.soulDust);
 
-        levelText = getString(R.string.level_text ) + " " + player.getLevel();
-        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        levelText = "Level " + player.getLevel();
+        XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
         goldText = " Gold: " + (int) player.getGold();
         herbsText = " Herbs: " + (int) player.getHerbs();
         oresText = " Ores: " + (int) player.getOres();

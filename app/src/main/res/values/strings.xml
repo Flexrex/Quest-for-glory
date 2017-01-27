@@ -6,8 +6,8 @@
     <string name="sound">Sound</string>
     <string name="notifications">Notifications</string>
     <string name="start">Start</string>
-    <string name="level">Level</string>
-    <string name="XP">XP </string>
+    <string name="level">Level 1</string>
+    <string name="XP">XP 0 / 200</string>
     <string name="greed">Greed</string>
     <string name="inventory">Inventory</string>
     <string name="skills">Skills</string>
@@ -18,7 +18,7 @@
     <string name="the_forest_rewards">Rewards 2 Herbs</string>
     <string name="the_mountain">The Mountain\nLevel 1</string>
     <string name="the_mountain_rewards">Rewards 2 Ores</string>
-    <string name="the_ruin">The Ruin\Level 1</string>
+    <string name="the_ruin">The Ruin\nLevel 1</string>
     <string name="the_ruin_rewards">Rewards 2 SoulDust</string>
     <string name="player">Player</string>
     <string name="spriggan">Spriggan</string>

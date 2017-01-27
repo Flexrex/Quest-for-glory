@@ -43,11 +43,11 @@ public class Quests extends AppCompatActivity
         mountain = (TextView) findViewById(R.id.mountain);
         ruin = (TextView) findViewById(R.id.ruin);
 
-        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
-        forestText = "The Forest\n Level " + spriggan.getLevel();
-        mountainText = "The Mountain\n Level " + 0;
-        ruinText = "The Ruin\n Level " + 0;
+        playerLevelText = "Level " + player.getLevel();
+        playerXPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
+        forestText = "The Forest\nLevel " + spriggan.getLevel();
+        mountainText = "The Mountain\nLevel " + 0;
+        ruinText = "The Ruin\nLevel " + 0;
 
         level.setText(playerLevelText);
         XP.setText(playerXPText);

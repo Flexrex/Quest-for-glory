@@ -31,8 +31,8 @@ public class Skills extends AppCompatActivity
         level = (TextView) findViewById(R.id.level);
         XP = (TextView) findViewById(R.id.XP);
 
-        levelText = getString(R.string.level_text ) + " " + player.getLevel();
-        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        levelText = "Level " + player.getLevel();
+        XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
 
         level.setText(levelText);
         XP.setText(XPText);

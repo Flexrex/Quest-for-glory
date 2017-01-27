@@ -31,8 +31,8 @@ public class Gear extends AppCompatActivity
         levelText = (TextView) findViewById(R.id.level);
         XPText = (TextView) findViewById(R.id.XP);
 
-        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        playerLevelText = "Level " + player.getLevel();
+        playerXPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
 
         levelText.setText(playerLevelText);
         XPText.setText(playerXPText);
@@ -43,6 +43,7 @@ public class Gear extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -52,6 +53,7 @@ public class Gear extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -61,6 +63,7 @@ public class Gear extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -70,6 +73,7 @@ public class Gear extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -79,6 +83,7 @@ public class Gear extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }

@@ -31,8 +31,8 @@ public class Inventory extends AppCompatActivity
         level = (TextView) findViewById(R.id.level);
         XP = (TextView) findViewById(R.id.XP);
 
-        LevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        LevelText = "Level " + player.getLevel();
+        XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
 
         level.setText(LevelText);
         XP.setText(XPText);
