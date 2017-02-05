@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 public class Player extends AppCompatActivity implements Serializable
 {
+    private boolean alive;
     private String name;
     private int level;
     private int XP;
@@ -17,8 +18,9 @@ public class Player extends AppCompatActivity implements Serializable
     private double ores;
     private double soulDust;
 
-    Player(String name, int level, int XP, int XPToNextLevel, double maxHealth, double damage, double gold, double herbs, double ores, double soulDust)
+    Player(boolean alive, String name, int level, int XP, int XPToNextLevel, double maxHealth, double damage, double gold, double herbs, double ores, double soulDust)
     {
+        this.alive = alive;
         this.name = name;
         this.level = level;
         this.XP = XP;
@@ -31,6 +33,7 @@ public class Player extends AppCompatActivity implements Serializable
         this.ores = ores;
         this.soulDust = soulDust;
     }
+    public boolean getAlive() { return alive; }
     public String getName()
     {
         return name;
@@ -46,6 +49,7 @@ public class Player extends AppCompatActivity implements Serializable
     public double getOres() { return ores; }
     public double getSoulDust() { return soulDust; }
     public double strike() { return damage; }
+    public void setAlive(boolean alive){ this.alive = alive;}
     public void setName(String name) { this.name = name; }
     public void setHealth(double amount) { this.health = amount; }
     public void takeDamage(double amount) { health -= amount; }

@@ -129,7 +129,7 @@
             android:contentDescription="@string/back" />
 
         <TextView
-            android:id="@+id/forest"
+            android:id="@+id/theForest"
             android:gravity="center"
             android:text="@string/the_forest"
             android:textSize="28sp"
@@ -160,7 +160,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/forestRewards"
+            android:id="@+id/theForestRewards"
             android:gravity="center"
             android:text="@string/the_forest_rewards"
             android:textSize="23sp"
@@ -191,7 +191,7 @@
             android:contentDescription="@string/back" />
 
         <TextView
-            android:id="@+id/mountain"
+            android:id="@+id/theMountain"
             android:gravity="center"
             android:text="@string/the_mountain"
             android:textSize="28sp"
@@ -220,7 +220,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/mountainRewards"
+            android:id="@+id/theMountainRewards"
             android:gravity="center"
             android:text="@string/the_mountain_rewards"
             android:textSize="23sp"
@@ -249,7 +249,7 @@
             android:contentDescription="@string/back" />
 
         <TextView
-            android:id="@+id/ruin"
+            android:id="@+id/theRuin"
             android:gravity="center"
             android:text="@string/the_ruin"
             android:textSize="28sp"
@@ -278,7 +278,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/ruinRewards"
+            android:id="@+id/theRuinRewards"
             android:gravity="center"
             android:text="@string/the_ruin_rewards"
             android:textSize="23sp"

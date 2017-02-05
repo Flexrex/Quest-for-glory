@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/level"
+            android:text="@string/level"
+            android:gravity="center"
+            android:textSize="23sp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/border_level_xp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/XP"
+            android:text="@string/XP"
+            android:gravity="center"
+            android:textSize="23sp"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/border_level_xp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/greedText"
+            android:gravity="center"
+            android:text="@string/greed"
+            android:textSize="23sp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_menus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:onClick="greed"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/inventoryText"
+            android:gravity="center"
+            android:text="@string/inventory"
+            android:textSize="23sp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_menus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:onClick="inventory"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/skillsText"
+            android:gravity="center"
+            android:text="@string/skills"
+            android:textSize="23sp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_menus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:onClick="skills"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/alchemyText"
+            android:gravity="center"
+            android:text="@string/offensiveGear"
+            android:textSize="35sp"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/border_offensive"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:background="@drawable/border_the_mountain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/alchemyHealthPotion" >
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/twoHanded"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/helms"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/pauldrons"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/chestplates"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/gloves"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/bracers"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/belts"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/leggings"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/boots"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/border_level_xp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:fontFamily="serif"
+                android:typeface="normal"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:layout_weight="1"
+                android:id="@+id/textView4" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gearText"
+            android:gravity="center"
+            android:text="@string/gear"
+            android:textSize="23sp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_menus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:onClick="gear"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/kingdomText"
+            android:gravity="center"
+            android:text="@string/kingdom"
+            android:textSize="23sp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_menus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:layout_weight="1"
+            android:onClick="kingdom"/>
+
+        <TextView
+            android:id="@+id/questsText"
+            android:gravity="center"
+            android:text="@string/quests"
+            android:textSize="23sp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_menus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="serif"
+            android:typeface="normal"
+            android:textAllCaps="false"
+            android:clickable="false"
+            android:onClick="quests"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

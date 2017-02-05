@@ -35,64 +35,28 @@ public class TheForest extends AppCompatActivity
         HP = (TextView) findViewById(R.id.HP);
 
         playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
-        sprigganHealthText = "Health: " + (int) spriggan.getHealth() + " / " + (int) spriggan.getMaxHealth();
+        sprigganHealthText = "Health: " +  (int) spriggan.getHealth() + " / " + (int) spriggan.getMaxHealth();
         HPText = "HP (" + healthPotion.getAmount() + ")";
 
         playerHealth.setText(playerHealthText);
         sprigganHealth.setText(sprigganHealthText);
         HP.setText(HPText);
+        spriggan.setAlive(true);
     }
     public void strike(View view)
     {
-        spriggan.takeDamage(player.strike());
-        sprigganHealthText = "Health: " + (int) spriggan.getHealth() + " / " + (int) spriggan.getMaxHealth();
-        sprigganHealth.setText(sprigganHealthText);
-        checkSprigganAlive();
-        player.takeDamage(spriggan.getDamage());
-        playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
-        playerHealth.setText(playerHealthText);
-        checkPlayerAlive();
-    }
-    public void useHealthPotion(View view)
-    {
-        if(healthPotion.getAmount() > 0 && player.getHealth() != player.getMaxHealth())
+        if (spriggan.getAlive() && player.getAlive())
         {
-            healthPotion.decreaseAmount();
-            player.increaseHealth(healthPotion.getHealthBuff());
-            if(player.getHealth() > player.getMaxHealth())
-            {
-                player.setHealth(player.getMaxHealth());
-            }
-            playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
-            HPText = "HP (" + healthPotion.getAmount() + ")";
-            playerHealth.setText(playerHealthText);
-            HP.setText(HPText);
+            spriggan.takeDamage(player.strike());
+            sprigganHealthText = "Health: " + (int) spriggan.getHealth() + " / " + (int) spriggan.getMaxHealth();
+            sprigganHealth.setText(sprigganHealthText);
         }
-    }
-    public void checkPlayerAlive()
-    {
-        if(player.getHealth() < 0.5)
+        // it should be less than 1 because of round off (down)!
+        if(spriggan.getHealth() < 1)
         {
             intent = new Intent(this, Quests.class);
             Bundle bundle = new Bundle();
-            spriggan.setHealth(spriggan.getMaxHealth());
-            if(spriggan.getLevel() > 1)
-            {
-                spriggan.levelDown();
-            }
-            bundle.putSerializable("player", player);
-            bundle.putSerializable("spriggan", spriggan);
-            bundle.putSerializable("healthPotion", healthPotion);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }
-    }
-    public void checkSprigganAlive()
-    {
-        if(spriggan.getHealth() <= 0)
-        {
-            intent = new Intent(this, Quests.class);
-            Bundle bundle = new Bundle();
+            spriggan.setAlive(false);
             spriggan.setHealth(spriggan.getMaxHealth());
             player.increaseXP(spriggan.getXPYield());
             player.increaseHerbs(spriggan.getHerbYield());
@@ -115,6 +79,45 @@ public class TheForest extends AppCompatActivity
             bundle.putSerializable("healthPotion", healthPotion);
             intent.putExtras(bundle);
             startActivity(intent);
+        }
+        if(player.getAlive() && spriggan.getAlive())
+        {
+            player.takeDamage(spriggan.getDamage());
+            playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
+            playerHealth.setText(playerHealthText);
+        }
+        // it should be less than 1 because of round off (down)!
+        if(player.getHealth() < 1)
+        {
+            intent = new Intent(this, Quests.class);
+            Bundle bundle = new Bundle();
+            player.setAlive(false);
+            spriggan.setHealth(spriggan.getMaxHealth());
+            if(spriggan.getLevel() > 1)
+            {
+                spriggan.levelDown();
+            }
+            bundle.putSerializable("player", player);
+            bundle.putSerializable("spriggan", spriggan);
+            bundle.putSerializable("healthPotion", healthPotion);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+    }
+    public void useHealthPotion(View view)
+    {
+        if(healthPotion.getAmount() > 0 && player.getHealth() != player.getMaxHealth() && player.getAlive())
+        {
+            healthPotion.decreaseAmount();
+            player.increaseHealth(healthPotion.getHealthBuff());
+            if(player.getHealth() > player.getMaxHealth())
+            {
+                player.setHealth(player.getMaxHealth());
+            }
+            playerHealthText = "Health: " + (int) player.getHealth() + " / " + (int) player.getMaxHealth();
+            HPText = "HP (" + healthPotion.getAmount() + ")";
+            playerHealth.setText(playerHealthText);
+            HP.setText(HPText);
         }
     }
 }

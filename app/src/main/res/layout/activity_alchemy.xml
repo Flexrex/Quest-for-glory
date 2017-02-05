@@ -96,13 +96,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/herbs"
             android:text="@string/herbs"
             android:textSize="23sp"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="33dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -111,19 +111,13 @@
             android:textAllCaps="false"
             android:clickable="false"
             android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/gold"
             android:text="@string/gold"
             android:textSize="23sp"
-            android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_width="fill_parent"
+            android:layout_height="33dp"
             android:background="@drawable/border_gold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -131,20 +125,14 @@
             android:textAllCaps="false"
             android:clickable="false"
             android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/alchemyText"
             android:gravity="center"
             android:text="@string/alchemy"
             android:textSize="35sp"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+            android:layout_width="fill_parent"
+            android:layout_height="75dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -154,10 +142,18 @@
             android:layout_weight="1" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="249dp"
-        android:background="@drawable/border_health">
+        android:layout_height="231dp"
+        android:background="@drawable/border_the_forest">
 
         <LinearLayout
             android:layout_width="match_parent"

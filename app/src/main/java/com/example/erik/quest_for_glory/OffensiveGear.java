@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Kingdom extends AppCompatActivity
+public class OffensiveGear extends AppCompatActivity
 {
     Intent intent;
     Bundle bundle;
@@ -15,22 +15,18 @@ public class Kingdom extends AppCompatActivity
     Potion healthPotion;
     TextView level;
     TextView XP;
-    TextView gold;
-    TextView herbs;
     TextView ores;
-    TextView soulDust;
+    TextView gold;
     String levelText;
     String XPText;
-    String goldText;
-    String herbsText;
     String oresText;
-    String soulDustText;
+    String goldText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kingdom);
+        setContentView(R.layout.activity_offensive_gear);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
@@ -38,54 +34,18 @@ public class Kingdom extends AppCompatActivity
 
         level = (TextView) findViewById(R.id.level);
         XP = (TextView) findViewById(R.id.XP);
-        gold =(TextView) findViewById(R.id.gold);
-        herbs = (TextView) findViewById(R.id.herbs);
         ores = (TextView) findViewById(R.id.ores);
-        soulDust = (TextView) findViewById(R.id.soulDust);
+        gold = (TextView) findViewById(R.id.gold);
 
         levelText = "Level " + player.getLevel();
         XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
-        goldText = " Gold: " + (int) player.getGold();
-        herbsText = " Herbs: " + (int) player.getHerbs();
         oresText = " Ores: " + (int) player.getOres();
-        soulDustText = " Soul Dust: " + (int) player.getSoulDust();
+        goldText = " Gold: " + (int) player.getGold();
 
         level.setText(levelText);
         XP.setText(XPText);
-        gold.setText(goldText);
-        herbs.setText(herbsText);
         ores.setText(oresText);
-        soulDust.setText(soulDustText);
-    }
-    public void alchemy(View view)
-    {
-        intent = new Intent(this, Alchemy.class);
-        bundle = new Bundle();
-        bundle.putSerializable("player", player);
-        bundle.putSerializable("spriggan", spriggan);
-        bundle.putSerializable("healthPotion", healthPotion);
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
-    public void blacksmithing(View view)
-    {
-        intent = new Intent(this, Blacksmithing.class);
-        bundle = new Bundle();
-        bundle.putSerializable("player", player);
-        bundle.putSerializable("spriggan", spriggan);
-        bundle.putSerializable("healthPotion", healthPotion);
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
-    public void enchanting(View view)
-    {
-        intent = new Intent(this, Enchanting.class);
-        bundle = new Bundle();
-        bundle.putSerializable("player", player);
-        bundle.putSerializable("spriggan", spriggan);
-        bundle.putSerializable("healthPotion", healthPotion);
-        intent.putExtras(bundle);
-        startActivity(intent);
+        gold.setText(goldText);
     }
     public void greed(View view)
     {
@@ -120,6 +80,16 @@ public class Kingdom extends AppCompatActivity
     public void gear(View view)
     {
         intent = new Intent(this, Gear.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+    public void kingdom(View view)
+    {
+        intent = new Intent(this, Kingdom.class);
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);

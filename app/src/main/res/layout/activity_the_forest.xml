@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_the_forest"
     android:layout_width="match_parent"
@@ -31,17 +32,14 @@
         android:layout_alignStart="@+id/spriggan"
         android:contentDescription="@string/player"/>
 
-    <TextView
+    <ImageView
         android:id="@+id/strike"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:background="@drawable/border_offensive"
-        android:text="@string/strike"
-        android:gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/strike"
         android:layout_below="@+id/playerHealth"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="40dp"
-        android:clickable="false"
         android:onClick="strike"/>
 
     <TextView

@@ -53,11 +53,22 @@
         <item>Mage</item>
         <item>Archer</item>
     </string-array>
-    <string name="strike_info">Strike\nDamaging enemies\nfor 100% attack power</string>
-    <string name="charge_info">Charge\nDamaging enemies\nfor 20% attack power</string>
-    <string name="leap_info">Leap\nDamaging enemies\nfor 50% attack power</string>
     <string name="strike">Strike</string>
     <string name="charge">Charge</string>
-    <string name="leap">Leap</string>
-
+    <string name="defense_up">Defense Up</string>
+    <string name="strike_info">Strike\nDamaging enemies\nfor 100% attack power\n</string>
+    <string name="charge_info">Charge\nDamaging enemies\nfor 50% attack power\nStun for 1 turn</string>
+    <string name="defense_up_info">Defense Up\nGain + 30% defense\nfor 3 turns\n</string>
+    <string name="offensiveGear">Offensive Gear</string>
+    <string name="defensiveGear">Defensive Gear</string>
+    <string name="gamblingGear">Gambling Gear</string>
+    <string name="twoHanded">Two-handed Weapons</string>
+    <string name="helms">Helms</string>
+    <string name="pauldrons">Pauldrons</string>
+    <string name="chestplates">Chestplates</string>
+    <string name="gloves">Gloves</string>
+    <string name="bracers">Bracers</string>
+    <string name="belts">Belts</string>
+    <string name="leggings">Leggings</string>
+    <string name="boots">Boots</string>
 </resources>

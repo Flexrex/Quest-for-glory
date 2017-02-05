@@ -102,7 +102,7 @@ public class Alchemy extends AppCompatActivity
             healthPotion.increaseAmount();
 
             goldText = " Gold: " + (int) player.getGold();
-            healthPotionText = "Health Potion Level " + healthPotion.getLevel() +  "\n+ " + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
+            healthPotionText = "Health Potion Level " + healthPotion.getLevel() + "\n" + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
             healthPotionUpgradeText = "Upgrade for\n" + (int) healthPotion.getUpgradeCost() + " Gold";
 
             gold.setText(goldText);
@@ -118,7 +118,7 @@ public class Alchemy extends AppCompatActivity
             healthPotion.decreaseAmount();
 
             goldText = " Gold: " + (int) player.getGold();
-            healthPotionText = "Health Potion Level " + healthPotion.getLevel() +  "\n+ " + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
+            healthPotionText = "Health Potion Level " + healthPotion.getLevel() + "\n" + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
             healthPotionUpgradeText = "Upgrade for\n" + (int) healthPotion.getUpgradeCost() + " Gold";
 
             gold.setText(goldText);
@@ -134,7 +134,7 @@ public class Alchemy extends AppCompatActivity
             healthPotion.increaseAmount();
 
             herbsText = " Herbs: " + (int) player.getHerbs();
-            healthPotionText = "Health Potion Level " + healthPotion.getLevel() +  "\n+ " + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
+            healthPotionText = "Health Potion Level " + healthPotion.getLevel() + "\n" + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
             healthPotionUpgradeText = "Upgrade for\n" + (int) healthPotion.getUpgradeCost() + " Gold";
 
             herbs.setText(herbsText);

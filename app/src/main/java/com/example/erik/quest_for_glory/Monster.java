@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 public class Monster extends AppCompatActivity implements Serializable
 {
+    private boolean alive;
     private String name;
     private int maxLevel;
     private int level;
@@ -17,8 +18,9 @@ public class Monster extends AppCompatActivity implements Serializable
     private double oreYield;
     private double soulDustYield;
 
-    Monster(String name, int maxLevel, double XPYield, int maxHealth, double damage, double goldYield, double herbYield, double oreYield, double soulDustYield)
+    Monster(boolean alive, String name, int maxLevel, double XPYield, double maxHealth, double damage, double goldYield, double herbYield, double oreYield, double soulDustYield)
     {
+        this.alive = alive;
         this.name = name;
         this.maxLevel = maxLevel;
         level = maxLevel;
@@ -31,6 +33,7 @@ public class Monster extends AppCompatActivity implements Serializable
         this.oreYield = oreYield;
         this.soulDustYield = soulDustYield;
     }
+    public boolean getAlive() { return alive; }
     public String getName() { return name; }
     public int getLevel() { return level; }
     public int getMaxLevel() { return maxLevel; }
@@ -40,6 +43,7 @@ public class Monster extends AppCompatActivity implements Serializable
     public double getGoldYield() { return goldYield; }
     public double getHerbYield() { return herbYield; }
     public double getDamage() { return damage; }
+    public void setAlive(boolean alive){ this.alive = alive; }
     public void setName(String name)
     {
         this.name = name;
