@@ -127,7 +127,7 @@
 
             <TextView
                 android:gravity="center"
-                android:text="@string/twoHanded"
+                android:text="@string/two_handed_weapons"
                 android:textSize="30sp"
                 android:layout_width="fill_parent"
                 android:layout_height="65dp"

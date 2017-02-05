@@ -101,8 +101,8 @@
         <TextView
             android:id="@+id/alchemyText"
             android:gravity="center"
-            android:text="@string/offensiveGear"
-            android:textSize="35sp"
+            android:text="@string/two_handed_weapons"
+            android:textSize="30sp"
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:background="@drawable/border_offensive"
@@ -127,7 +127,7 @@
 
             <TextView
                 android:gravity="center"
-                android:text="@string/twoHanded"
+                android:text=""
                 android:textSize="30sp"
                 android:layout_width="fill_parent"
                 android:layout_height="65dp"
