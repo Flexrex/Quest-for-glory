@@ -26,6 +26,7 @@
             android:textAllCaps="false"
             android:layout_weight="1" />
 
+
         <TextView
             android:id="@+id/XP"
             android:text="@string/XP"
