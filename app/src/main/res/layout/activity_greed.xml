@@ -92,27 +92,34 @@
             android:onClick="skills"
             android:layout_weight="1" />
     </LinearLayout>
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <TextView
             android:id="@+id/theForestText"
             android:gravity="center"
-            android:text="Greed"
-            android:textSize="40dp"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="372dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
             android:typeface="normal"
             android:textAllCaps="false"
-            android:clickable="false"
-            android:layout_weight="1" />
+            android:clickable="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+
     </LinearLayout>
+    </ScrollView>
+
 
     <LinearLayout
         android:layout_width="match_parent"

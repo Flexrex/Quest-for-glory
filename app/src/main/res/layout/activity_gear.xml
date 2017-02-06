@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -94,15 +95,13 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/theForestText"
             android:gravity="center"
-            android:text="Gear"
             android:textSize="40dp"
             android:layout_width="100dp"
             android:layout_height="372dp"
@@ -112,8 +111,182 @@
             android:typeface="normal"
             android:textAllCaps="false"
             android:clickable="false"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_weight="1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            app:srcCompat="@android:color/black"
+            android:id="@+id/imageView"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <ImageView
+            app:srcCompat="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageView2"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignStart="@+id/imageView3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/imageView3" />
+
+        <ImageView
+            app:srcCompat="@android:color/black"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="9dp"
+            android:id="@+id/imageView3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <ImageView
+            app:srcCompat="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/imageView"
+            android:layout_alignStart="@+id/imageView" />
+
+        <ImageView
+            app:srcCompat="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageView5"
+            android:layout_width="40dp"
+            android:layout_below="@+id/imageView4"
+            android:layout_alignStart="@+id/imageView4"
+            android:layout_height="40dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView6"
+            app:srcCompat="@android:color/black"
+            android:layout_below="@+id/imageView5"
+            android:layout_alignStart="@+id/imageView5"
+            android:layout_marginTop="5dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@android:color/black"
+            android:layout_below="@+id/imageView6"
+            android:layout_alignStart="@+id/imageView6"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageView7"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@android:color/black"
+            android:layout_below="@+id/imageView7"
+            android:layout_alignStart="@+id/imageView7"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_red_dark"
+            android:text="Hp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:id="@+id/Healthbar"
+            />
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_below="@+id/Healthbar"
+            android:text="Defense"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:id="@+id/Defense" />
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/Defense"
+            android:background="@android:color/holo_orange_dark"
+            android:text="Attack power"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:id="@+id/AttackPower"/>
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:text="Crit Chance"
+            android:layout_below="@+id/AttackPower"
+            android:background="@android:color/holo_green_dark"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:id="@+id/CritChance"/>
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/Healthbar"
+            android:background="@android:color/black"
+            android:layout_marginLeft="9dp"
+            />
+        <ScrollView
+            android:layout_width="280dp"
+            android:layout_height="252dp"
+            android:layout_below="@+id/CritChance"
+            android:id="@+id/Inventory">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@android:color/black"
+                    android:id="@+id/Slot1"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="13dp"
+                        android:background="@android:color/black"
+                        android:layout_toEndOf="@+id/Slot1"
+                        android:id="@+id/Slot2"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@android:color/black"
+                        android:layout_toEndOf="@+id/Slot2"
+                        android:id="@+id/Slot3"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="13dp"
+                        android:background="@android:color/black"
+                        android:layout_toEndOf="@+id/Slot3"
+                        android:id="@+id/Slot4"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/Slot1"
+                        android:layout_margin="13dp"
+                        android:background="@android:color/black"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
