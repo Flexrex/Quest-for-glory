@@ -138,7 +138,7 @@
                 android:textAllCaps="false"
                 android:clickable="false"
                 android:layout_weight="1"
-                android:onClick="offensiveGear"/>
+                android:onClick="offensiveGear" />
 
             <TextView
                 android:gravity="center"
@@ -152,7 +152,8 @@
                 android:typeface="normal"
                 android:textAllCaps="false"
                 android:clickable="false"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="offensiveGear" />
 
             <TextView
                 android:gravity="center"

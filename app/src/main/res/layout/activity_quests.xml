@@ -174,7 +174,6 @@
             android:clickable="true"
             android:onClick="theForest"
             android:layout_weight="1" />
-
     </LinearLayout>
 
     <LinearLayout
