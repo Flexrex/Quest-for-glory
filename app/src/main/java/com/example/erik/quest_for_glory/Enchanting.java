@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Skills extends AppCompatActivity
+public class Enchanting extends AppCompatActivity
 {
     Intent intent;
     Bundle bundle;
@@ -15,14 +15,28 @@ public class Skills extends AppCompatActivity
     Potion healthPotion;
     TextView level;
     TextView XP;
+    TextView herbs;
+    TextView gold;
+    TextView theHealthPotion;
+    TextView healthPotionUpgrade;
+    TextView healthPotionCraft;
+    TextView healthPotionSell;
+    TextView healthPotionBuy;
     String levelText;
     String XPText;
+    String herbsText;
+    String goldText;
+    String healthPotionText;
+    String healthPotionUpgradeText;
+    String healthPotionCraftText;
+    String healthPotionSellText;
+    String healthPotionBuyText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_skills);
+        setContentView(R.layout.activity_enchanting);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
@@ -30,12 +44,33 @@ public class Skills extends AppCompatActivity
 
         level = (TextView) findViewById(R.id.level);
         XP = (TextView) findViewById(R.id.XP);
+        herbs = (TextView) findViewById(R.id.herbs);
+        gold = (TextView) findViewById(R.id.gold);
+        theHealthPotion = (TextView) findViewById(R.id.healthPotion);
+        healthPotionUpgrade = (TextView) findViewById(R.id.healthPotionUpgrade);
+        healthPotionCraft = (TextView) findViewById(R.id.healthPotionCraft);
+        healthPotionSell = (TextView) findViewById(R.id.healthPotionSell);
+        healthPotionBuy = (TextView) findViewById(R.id.healthPotionBuy);
 
         levelText = "Level " + player.getLevel();
         XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
+        herbsText = " Herbs: " + (int) player.getHerbs();
+        goldText = " Gold: " + (int) player.getGold();
+        healthPotionText = "Health Potion Level " + healthPotion.getLevel() + "\n" + (int) healthPotion.getHealthBuff() + " Health " + "(" + healthPotion.getAmount() + ")";
+        healthPotionUpgradeText = "Upgrade for\n" + (int) healthPotion.getUpgradeCost() + " Gold";
+        healthPotionCraftText = "Craft for\n" + (int) healthPotion.getHerbCost() + " Herbs";
+        healthPotionSellText = "Sell for\n" + (int) healthPotion.getGoldWorth() + " Gold";
+        healthPotionBuyText = "Buy for\n" + (int) healthPotion.getGoldCost() + " Gold";
 
         level.setText(levelText);
         XP.setText(XPText);
+        herbs.setText(herbsText);
+        gold.setText(goldText);
+        theHealthPotion.setText(healthPotionText);
+        healthPotionUpgrade.setText(healthPotionUpgradeText);
+        healthPotionCraft.setText(healthPotionCraftText);
+        healthPotionSell.setText(healthPotionSellText);
+        healthPotionBuy.setText(healthPotionBuyText);
     }
     public void greed(View view)
     {
@@ -50,6 +85,16 @@ public class Skills extends AppCompatActivity
     public void inventory(View view)
     {
         intent = new Intent(this, Inventory.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+    public void skills(View view)
+    {
+        intent = new Intent(this, Skills.class);
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);

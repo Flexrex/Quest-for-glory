@@ -1,13 +1,11 @@
 package com.example.erik.quest_for_glory;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import java.io.Serializable;
 
 public class Monster extends AppCompatActivity implements Serializable
 {
+    private boolean alive;
     private String name;
     private int maxLevel;
     private int level;
@@ -15,12 +13,14 @@ public class Monster extends AppCompatActivity implements Serializable
     private double maxHealth;
     private double health;
     private double damage;
+    private double goldYield;
     private double herbYield;
     private double oreYield;
     private double soulDustYield;
 
-    Monster(String name, int maxLevel, double XPYield, int maxHealth, double damage, double herbYield, double oreYield, double soulDustYield)
+    Monster(boolean alive, String name, int maxLevel, double XPYield, double maxHealth, double damage, double goldYield, double herbYield, double oreYield, double soulDustYield)
     {
+        this.alive = alive;
         this.name = name;
         this.maxLevel = maxLevel;
         level = maxLevel;
@@ -28,35 +28,35 @@ public class Monster extends AppCompatActivity implements Serializable
         this.maxHealth = maxHealth;
         health = maxHealth;
         this.damage = damage;
+        this.goldYield = goldYield;
         this.herbYield = herbYield;
         this.oreYield = oreYield;
         this.soulDustYield = soulDustYield;
     }
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quests);
-    }
+    public boolean getAlive() { return alive; }
+    public String getName() { return name; }
+    public int getLevel() { return level; }
+    public int getMaxLevel() { return maxLevel; }
+    public double getMaxHealth() { return maxHealth; }
+    public double getHealth() { return health; }
+    public double getXPYield() { return XPYield; }
+    public double getGoldYield() { return goldYield; }
+    public double getHerbYield() { return herbYield; }
+    public double getDamage() { return damage; }
+    public void setAlive(boolean alive){ this.alive = alive; }
     public void setName(String name)
     {
         this.name = name;
     }
-    public String getName()
-    {
-        return name;
-    }
-    public int getMaxLevel() { return maxLevel; }
     public void increaseMaxLevel() { maxLevel += 1; }
-    public int getLevel()
+    public void setHealth(double health)
     {
-        return level;
+        this.health = health;
     }
-    public double getXPYield()
+    public void takeDamage(double damage)
     {
-        return XPYield;
+        health -= damage;
     }
-    public double getHerbYield() { return herbYield; }
     public void levelUp()
     {
         level += 1;
@@ -64,6 +64,7 @@ public class Monster extends AppCompatActivity implements Serializable
         health = maxHealth;
         damage *= 1.4;
         XPYield *= 1.5;
+        goldYield *= 1.5;
         herbYield *= 1.5;
     }
     public void levelDown()
@@ -73,23 +74,7 @@ public class Monster extends AppCompatActivity implements Serializable
         health = maxHealth;
         damage /= 1.4;
         XPYield /= 1.5;
+        goldYield /= 1.5;
         herbYield /= 1.5;
-    }
-    public void setHealth(double health)
-    {
-        this.health = health;
-    }
-    public double getMaxHealth() { return maxHealth; }
-    public double getHealth()
-    {
-        return health;
-    }
-    public void takeDamage(double damage)
-    {
-        health -= damage;
-    }
-    public double getDamage()
-    {
-        return damage;
     }
 }

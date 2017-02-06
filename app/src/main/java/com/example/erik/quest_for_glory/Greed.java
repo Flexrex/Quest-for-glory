@@ -12,23 +12,27 @@ public class Greed extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
+    Potion healthPotion;
     TextView level;
     TextView XP;
     String LevelText;
     String XPText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_greed);
-        level = (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
+        healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
 
-        LevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        XPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+        level = (TextView) findViewById(R.id.level);
+        XP = (TextView) findViewById(R.id.XP);
+
+        LevelText = "Level " + player.getLevel();
+        XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
 
         level.setText(LevelText);
         XP.setText(XPText);
@@ -39,6 +43,7 @@ public class Greed extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -48,6 +53,7 @@ public class Greed extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -57,6 +63,7 @@ public class Greed extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -66,6 +73,7 @@ public class Greed extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -75,6 +83,7 @@ public class Greed extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }

@@ -12,48 +12,52 @@ public class Quests extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
+    Potion healthPotion;
     TextView level;
     TextView XP;
-    TextView forest;
-    TextView mountain;
-    TextView ruin;
+    TextView theForest;
+    TextView theMountain;
+    TextView theRuin;
+    TextView theForestReward;
+    TextView theMountainReward;
+    TextView TheRuinReward;
     String playerLevelText;
     String playerXPText;
-    String forestText;
-    String mountainText;
-    String ruinText;
+    String theForestText;
+    String theMountainText;
+    String theRuinText;
+    String theForestRewardText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quests);
-        level= (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
-        forest = (TextView) findViewById(R.id.forest);
-        mountain = (TextView) findViewById(R.id.mountain);
-        ruin = (TextView) findViewById(R.id.ruin) ;
+
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
-        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
-        forestText = "The Forest\n Level " + spriggan.getLevel();
-        mountainText = "The Mountain\n Level " + 0;
-        ruinText = "The Ruin\n Level " + 0;
+        healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
+
+        level= (TextView) findViewById(R.id.level);
+        XP = (TextView) findViewById(R.id.XP);
+        theForest = (TextView) findViewById(R.id.theForest);
+        theMountain = (TextView) findViewById(R.id.theMountain);
+        theRuin = (TextView) findViewById(R.id.theRuin);
+        theForestReward = (TextView) findViewById(R.id.theForestRewards);
+
+        playerLevelText = "Level " + player.getLevel();
+        playerXPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
+        theForestText = "The Forest\nLevel " + spriggan.getLevel();
+        theMountainText = "The Mountain\nLevel " + 0;
+        theRuinText = "The Ruin\nLevel " + 0;
+        theForestRewardText = "Rewards " + (int) spriggan.getHerbYield() + " Herbs" + " and " + (int) spriggan.getGoldYield() + " Gold";
+
         level.setText(playerLevelText);
         XP.setText(playerXPText);
-        forest.setText(forestText);
-        mountain.setText(mountainText);
-        ruin.setText((ruinText));
-    }
-    public void theForest(View view)
-    {
-        intent = new Intent(this, TheForest.class);
-        bundle = new Bundle();
-        bundle.putSerializable("player", player);
-        bundle.putSerializable("spriggan", spriggan);
-        intent.putExtras(bundle);
-        startActivity(intent);
+        theForest.setText(theForestText);
+        theMountain.setText(theMountainText);
+        theRuin.setText(theRuinText);
+        theForestReward.setText(theForestRewardText);
     }
     public void increaseTheForestLevel(View view)
     {
@@ -62,18 +66,32 @@ public class Quests extends AppCompatActivity
         {
             spriggan.levelDown();
         }
-        forestText = "The Forest\n Level " + spriggan.getLevel();
-        forest.setText(forestText);
+        theForestText = "The Forest\nLevel " + spriggan.getLevel();
+        theForestRewardText = "Rewards " + (int) spriggan.getHerbYield() + " Herbs" + " and " + (int) spriggan.getGoldYield() + " Gold";
+        theForest.setText(theForestText);
+        theForestReward.setText(theForestRewardText);
     }
     public void decreaseTheForestLevel(View view)
     {
         spriggan.levelDown();
-        if(spriggan.getLevel() == 0)
+        if(spriggan.getLevel() <= 0)
         {
             spriggan.levelUp();
         }
-        forestText = "The Forest\n Level " + spriggan.getLevel();
-        forest.setText(forestText);
+        theForestText = "The Forest\nLevel " + spriggan.getLevel();
+        theForestRewardText = "Rewards " + (int) spriggan.getHerbYield() + " Herbs" + " and " + (int) spriggan.getGoldYield() + " Gold";
+        theForest.setText(theForestText);
+        theForestReward.setText(theForestRewardText);
+    }
+    public void theForest(View view)
+    {
+        intent = new Intent(this, TheForest.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
     public void greed(View view)
     {
@@ -81,6 +99,7 @@ public class Quests extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -90,6 +109,7 @@ public class Quests extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -99,6 +119,7 @@ public class Quests extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -108,6 +129,7 @@ public class Quests extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -117,6 +139,7 @@ public class Quests extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }

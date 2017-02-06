@@ -12,35 +12,47 @@ public class Kingdom extends AppCompatActivity
     Bundle bundle;
     Player player;
     Monster spriggan;
+    Potion healthPotion;
     TextView level;
     TextView XP;
+    TextView gold;
     TextView herbs;
     TextView ores;
     TextView soulDust;
-    String playerLevelText;
-    String playerXPText;
+    String levelText;
+    String XPText;
+    String goldText;
     String herbsText;
     String oresText;
     String soulDustText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kingdom);
-        level = (TextView) findViewById(R.id.levelText);
-        XP = (TextView) findViewById(R.id.XPText);
+
+        player = (Player) getIntent().getSerializableExtra("player");
+        spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
+        healthPotion = (Potion) getIntent().getSerializableExtra("healthPotion");
+
+        level = (TextView) findViewById(R.id.level);
+        XP = (TextView) findViewById(R.id.XP);
+        gold =(TextView) findViewById(R.id.gold);
         herbs = (TextView) findViewById(R.id.herbs);
         ores = (TextView) findViewById(R.id.ores);
         soulDust = (TextView) findViewById(R.id.soulDust);
-        player = (Player) getIntent().getSerializableExtra("player");
-        spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
-        playerLevelText = getString(R.string.level_text ) + " " + player.getLevel();
-        playerXPText = getString(R.string.XP_text) + " " + player.getXP() + " / " + player.getXPToNextLevel();
+
+        levelText = "Level " + player.getLevel();
+        XPText = "XP " + player.getXP() + " / " + player.getXPToNextLevel();
+        goldText = " Gold: " + (int) player.getGold();
         herbsText = " Herbs: " + (int) player.getHerbs();
         oresText = " Ores: " + (int) player.getOres();
         soulDustText = " Soul Dust: " + (int) player.getSoulDust();
-        level.setText(playerLevelText);
-        XP.setText(playerXPText);
+
+        level.setText(levelText);
+        XP.setText(XPText);
+        gold.setText(goldText);
         herbs.setText(herbsText);
         ores.setText(oresText);
         soulDust.setText(soulDustText);
@@ -51,6 +63,27 @@ public class Kingdom extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+    public void blacksmithing(View view)
+    {
+        intent = new Intent(this, Blacksmithing.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+    public void enchanting(View view)
+    {
+        intent = new Intent(this, Enchanting.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -60,6 +93,7 @@ public class Kingdom extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -69,6 +103,7 @@ public class Kingdom extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -78,6 +113,7 @@ public class Kingdom extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -87,6 +123,7 @@ public class Kingdom extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -96,6 +133,7 @@ public class Kingdom extends AppCompatActivity
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
         intent.putExtras(bundle);
         startActivity(intent);
     }

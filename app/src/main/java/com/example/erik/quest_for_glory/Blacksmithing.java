@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Skills extends AppCompatActivity
+public class Blacksmithing extends AppCompatActivity
 {
     Intent intent;
     Bundle bundle;
@@ -15,6 +15,8 @@ public class Skills extends AppCompatActivity
     Potion healthPotion;
     TextView level;
     TextView XP;
+    TextView ores;
+    TextView gold;
     String levelText;
     String XPText;
 
@@ -22,7 +24,7 @@ public class Skills extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_skills);
+        setContentView(R.layout.activity_blacksmithing);
 
         player = (Player) getIntent().getSerializableExtra("player");
         spriggan = (Monster) getIntent().getSerializableExtra("spriggan");
@@ -37,6 +39,16 @@ public class Skills extends AppCompatActivity
         level.setText(levelText);
         XP.setText(XPText);
     }
+    public void offensiveGear(View view)
+    {
+        intent = new Intent(this, OffensiveGear.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
     public void greed(View view)
     {
         intent = new Intent(this, Greed.class);
@@ -50,6 +62,16 @@ public class Skills extends AppCompatActivity
     public void inventory(View view)
     {
         intent = new Intent(this, Inventory.class);
+        bundle = new Bundle();
+        bundle.putSerializable("player", player);
+        bundle.putSerializable("spriggan", spriggan);
+        bundle.putSerializable("healthPotion", healthPotion);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+    public void skills(View view)
+    {
+        intent = new Intent(this, Skills.class);
         bundle = new Bundle();
         bundle.putSerializable("player", player);
         bundle.putSerializable("spriggan", spriggan);

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -12,10 +11,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/levelText"
-            android:text="@string/level_text"
+            android:id="@+id/level"
+            android:text="@string/level"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -26,10 +25,10 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/XPText"
-            android:text="@string/XP_text"
+            android:id="@+id/XP"
+            android:text="@string/XP"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:background="@drawable/border_level_xp"
@@ -48,8 +47,8 @@
         <TextView
             android:id="@+id/greedText"
             android:gravity="center"
-            android:text="@string/greed_text"
-            android:textSize="23dp"
+            android:text="@string/greed"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -64,8 +63,8 @@
         <TextView
             android:id="@+id/inventoryText"
             android:gravity="center"
-            android:text="@string/inventory_text"
-            android:textSize="23dp"
+            android:text="@string/inventory"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -80,8 +79,8 @@
         <TextView
             android:id="@+id/skillsText"
             android:gravity="center"
-            android:text="@string/skills_text"
-            android:textSize="23dp"
+            android:text="@string/skills"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -102,9 +101,9 @@
         <TextView
             android:id="@+id/quest_1"
             android:gravity="center"
-            android:text="@string/quest_1_text"
-            android:textSize="21dp"
-            android:layout_width="100dp"
+            android:text="@string/quest_1"
+            android:textSize="21sp"
+            android:layout_width="0dp"
             android:layout_height="45dp"
             android:background="@drawable/border_quest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -125,17 +124,16 @@
             android:layout_height="74dp"
             android:src="@drawable/arrow_back"
             android:id="@+id/forestLevelBack"
-            android:layout_alignParentBottom="true"
             android:background="@drawable/border_the_forest"
             android:onClick="decreaseTheForestLevel"
-            android:layout_alignStart="@+id/spriggan" />
+            android:contentDescription="@string/back" />
 
         <TextView
-            android:id="@+id/forest"
+            android:id="@+id/theForest"
             android:gravity="center"
-            android:text="@string/forest_text"
-            android:textSize="30dp"
-            android:layout_width="100dp"
+            android:text="@string/the_forest"
+            android:textSize="28sp"
+            android:layout_width="0dp"
             android:layout_height="74dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -151,10 +149,9 @@
             android:layout_height="74dp"
             android:src="@drawable/arrow_forward"
             android:id="@+id/theForestLevelForward"
-            android:layout_alignParentBottom="true"
             android:background="@drawable/border_the_forest"
             android:onClick="increaseTheForestLevel"
-            android:layout_alignStart="@+id/spriggan" />
+            android:contentDescription="@string/forward" />
     </LinearLayout>
 
     <LinearLayout
@@ -163,11 +160,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/forestRewards"
+            android:id="@+id/theForestRewards"
             android:gravity="center"
-            android:text="@string/the_forest_text_rewards"
-            android:textSize="23dp"
-            android:layout_width="100dp"
+            android:text="@string/the_forest_rewards"
+            android:textSize="23sp"
+            android:layout_width="0dp"
             android:layout_height="35dp"
             android:background="@drawable/border_the_forest"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -177,6 +174,7 @@
             android:clickable="true"
             android:onClick="theForest"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -189,16 +187,15 @@
             android:layout_height="74dp"
             android:src="@drawable/arrow_back"
             android:id="@+id/mountainLevelBack"
-            android:layout_alignParentBottom="true"
             android:background="@drawable/border_the_mountain"
-            android:layout_alignStart="@+id/spriggan" />
+            android:contentDescription="@string/back" />
 
         <TextView
-            android:id="@+id/mountain"
+            android:id="@+id/theMountain"
             android:gravity="center"
-            android:text="@string/mountain_text"
-            android:textSize="30dp"
-            android:layout_width="100dp"
+            android:text="@string/the_mountain"
+            android:textSize="28sp"
+            android:layout_width="0dp"
             android:layout_height="74dp"
             android:background="@drawable/border_the_mountain"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -213,9 +210,8 @@
             android:layout_height="74dp"
             android:src="@drawable/arrow_forward"
             android:id="@+id/mountainLevelForward"
-            android:layout_alignParentBottom="true"
             android:background="@drawable/border_the_mountain"
-            android:layout_alignStart="@+id/spriggan" />
+            android:contentDescription="@string/forward" />
     </LinearLayout>
 
     <LinearLayout
@@ -224,11 +220,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/mountainRewards"
+            android:id="@+id/theMountainRewards"
             android:gravity="center"
-            android:text="@string/the_mountain_text_rewards"
-            android:textSize="23dp"
-            android:layout_width="100dp"
+            android:text="@string/the_mountain_rewards"
+            android:textSize="23sp"
+            android:layout_width="0dp"
             android:layout_height="35dp"
             android:background="@drawable/border_the_mountain"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -249,17 +245,16 @@
             android:layout_height="74dp"
             android:src="@drawable/arrow_back"
             android:id="@+id/ruinLevelBack"
-            android:layout_alignParentBottom="true"
             android:background="@drawable/border_the_ruin"
-            android:layout_alignStart="@+id/spriggan" />
+            android:contentDescription="@string/back" />
 
         <TextView
-            android:id="@+id/ruin"
+            android:id="@+id/theRuin"
             android:gravity="center"
-            android:text="@string/ruin_text"
-            android:textSize="30dp"
-            android:layout_width="100dp"
-            android:layout_height="74dp"
+            android:text="@string/the_ruin"
+            android:textSize="28sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:background="@drawable/border_the_ruin"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:fontFamily="serif"
@@ -273,9 +268,8 @@
             android:layout_height="74dp"
             android:src="@drawable/arrow_forward"
             android:id="@+id/ruinLevelForward"
-            android:layout_alignParentBottom="true"
             android:background="@drawable/border_the_ruin"
-            android:layout_alignStart="@+id/spriggan" />
+            android:contentDescription="@string/forward" />
     </LinearLayout>
 
     <LinearLayout
@@ -284,11 +278,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/ruinRewards"
+            android:id="@+id/theRuinRewards"
             android:gravity="center"
-            android:text="@string/the_ruin_text_rewards"
-            android:textSize="23dp"
-            android:layout_width="100dp"
+            android:text="@string/the_ruin_rewards"
+            android:textSize="23sp"
+            android:layout_width="0dp"
             android:layout_height="35dp"
             android:background="@drawable/border_the_ruin"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -307,8 +301,8 @@
         <TextView
             android:id="@+id/gearText"
             android:gravity="center"
-            android:text="@string/gear_text"
-            android:textSize="23dp"
+            android:text="@string/gear"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -323,8 +317,8 @@
         <TextView
             android:id="@+id/kingdomText"
             android:gravity="center"
-            android:text="@string/kingdom_text"
-            android:textSize="23dp"
+            android:text="@string/kingdom"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus"
@@ -339,8 +333,8 @@
         <TextView
             android:id="@+id/questsText"
             android:gravity="center"
-            android:text="@string/quests_text"
-            android:textSize="23dp"
+            android:text="@string/quests"
+            android:textSize="23sp"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/border_menus_highlight"

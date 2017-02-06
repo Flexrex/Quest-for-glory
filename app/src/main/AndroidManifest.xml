@@ -26,7 +26,10 @@
         <activity android:name=".Skills" />
         <activity android:name=".Gear" />
         <activity android:name=".Kingdom" />
-        <activity android:name=".Alchemy"></activity>
+        <activity android:name=".Alchemy" />
+        <activity android:name=".Blacksmithing" />
+        <activity android:name=".Enchanting" />
+        <activity android:name=".TwoHandedWeapons" />
     </application>
 
 </manifest>

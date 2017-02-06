@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_the_forest"
     android:layout_width="match_parent"
@@ -12,13 +13,14 @@
     tools:context="com.example.erik.quest_for_glory.TheForest">
 
     <ImageView
-    android:layout_width="100dp"
-    android:layout_height="150dp"
-    android:src="@drawable/spriggan"
-    android:id="@+id/spriggan"
-    android:layout_marginTop="10dp"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"/>
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/spriggan"
+        android:id="@+id/spriggan"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/spriggan"/>
 
     <ImageView
         android:layout_width="110dp"
@@ -27,37 +29,50 @@
         android:id="@+id/player"
         android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/spriggan" />
-    <TextView
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:background="@drawable/border_health"
-        android:text="Health: "
-        android:gravity="center"
-        android:id="@+id/sprigganHealthBar"
-        android:layout_below="@+id/spriggan"
         android:layout_alignStart="@+id/spriggan"
-        android:layout_marginTop="10dp" />
-    <TextView
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:background="@drawable/border_health"
-        android:text="Health: "
-        android:gravity="center"
-        android:id="@+id/playerHealthBar"
-        android:layout_above="@+id/player"
-        android:layout_alignStart="@+id/player"
-        android:layout_marginBottom="10dp" />
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:background="@drawable/border_offensive"
-        android:text="Strike"
-        android:gravity="center"
+        android:contentDescription="@string/player"/>
+
+    <ImageView
         android:id="@+id/strike"
-        android:layout_below="@+id/playerHealthBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/strike"
+        android:layout_below="@+id/playerHealth"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="40dp"
-        android:clickable="false"
         android:onClick="strike"/>
+
+    <TextView
+        android:id="@+id/HP"
+        android:layout_width="52sp"
+        android:layout_height="wrap_content"
+        android:text="@string/health_potion"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:background="@drawable/border_health"
+        android:layout_above="@+id/playerHealth"
+        android:layout_alignParentEnd="true"
+        android:onClick="useHealthPotion"/>
+
+    <TextView
+        android:id="@+id/sprigganHealth"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/border_health"
+        android:text="@string/enemy_health"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/spriggan"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/playerHealth"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/border_health"
+        android:text="@string/player_health"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/player"
+        android:layout_alignStart="@+id/sprigganHealth" />
 </RelativeLayout>
